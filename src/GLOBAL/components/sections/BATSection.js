@@ -47,7 +47,7 @@ const BookATripSection = ({ classNameName }) => {
             <div className="text-body">
               {items.map((item, index) => (
                 <TextBodyItem
-                classNameName={index === activeIndex ? "active" : ""}
+                className={index === activeIndex ? "active" : ""}
                   key={index}
                   iconSrc={item.iconSrc}
                   header={item.header}
@@ -55,12 +55,12 @@ const BookATripSection = ({ classNameName }) => {
                 />
               ))}
               <></>
-              <ArrowedButton label="Learn More" classNameName="margin-right"/>
+              <ArrowedButton label="Learn More" className="margin-right"/>
             </div>
           </div>
           <div className="w-layout-blockcontainer image-container w-container"></div>
         </div>
-        <Arrow classNameName="flex-align"/>
+        <Arrow className="flex-align"/>
       </div>
     </section>
   );
