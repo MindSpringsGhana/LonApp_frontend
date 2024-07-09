@@ -1,0 +1,138 @@
+@import '../../global';
+
+
+.navbar-logo-left {
+    min-height: 4.5rem;
+    background-color: $tertiary_color;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    text-decoration: none;
+    display: flex;
+    position: fixed !important;
+    box-shadow: 0 2px 25px #b5b5bd;
+}
+.w-nav {
+    z-index: 1000;
+    position: relative;
+}
+
+.w-nav:before, .w-nav:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+.w-nav:after {
+    clear: both;
+}
+.w-nav:before, .w-nav:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+
+.navbarcontainer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-nav-overlay {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.navbar-content {
+    justify-content: space-between;
+    align-items: center;
+    width: 1209.17px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-decoration: none;
+    display: flex;
+}
+
+.navbar-menu {
+    grid-column-gap: 32px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+}
+
+.navbar-link-2.margin-0 {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+.navbar-link-2 {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 12px;
+    text-decoration: none;
+    
+    .text-4 {
+        font-family: Lexend, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 100%;
+        text-decoration: none;
+    }
+    .text-4 {
+        margin-right: .40625rem;
+    }
+}
+.w-nav-link {
+    vertical-align: top;
+    color: $neutral_600_color;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+
+    .text-3 {
+        color: $neutral_600_color;
+        font-family: Lexend, sans-serif;
+        font-size: 17px;
+
+        &:hover {
+            color: $primary_color;
+            transition: color ease 0.5s;
+        }
+    }
+    
+
+}
+
+// .w-nav-menu {
+//     float: right;
+//     position: relative;
+// }
+
+.navbar-brand {
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+
+  
+}

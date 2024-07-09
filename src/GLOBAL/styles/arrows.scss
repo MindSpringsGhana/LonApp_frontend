@@ -1,0 +1,39 @@
+.arrow-buttons-wrapper {
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    min-width: 25px;
+    margin-bottom: 0;
+    margin-right: 3.125rem;
+    display: flex;
+
+    &.ts-margin-right-none {
+      margin-right: 0;
+    }
+  
+    .arrow-buttons-container {
+      .arrow-margin-bottom {
+        margin-bottom: 2.25rem !important;
+        display: none;
+      }
+      
+      .arrow-up-style {
+        margin-bottom: 1.125rem;
+      }
+
+      .ts-arrow-up-style {
+        margin-bottom: 3.594rem;
+      }
+  
+      img:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .flex-align {
+    
+    align-items: end !important;
+  }
+
+  

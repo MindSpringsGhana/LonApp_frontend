@@ -1,0 +1,42 @@
+.tag-tag {
+    height: 29px;
+    width: 95px;
+}
+
+.tag-tag .tag {
+    height: 29px;
+    overflow: hidden;
+}
+
+.tag-tag .overlap-group {
+    border-radius: 14.5px;
+    height: 31px;
+    left: -1px;
+    position: relative;
+    top: -1px;
+    width: 97px;
+}
+
+.tag-tag .rectangle {
+    background-color: #473bf0;
+    border-radius: 14.5px;
+    height: 31px;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 97px;
+}
+
+.tag-tag .save {
+    color: #473bf0;
+    font-family: "Gilroy-Bold", Helvetica;
+    font-size: 13px;
+    font-weight: 700;
+    left: 14px;
+    letter-spacing: 1.62px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+}
