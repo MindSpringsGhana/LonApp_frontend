@@ -31,10 +31,10 @@
                     width: 10px;
                     height: 10px;
                     border-radius: 50px;
-                    border: 1px solid $neutral_600_color;
+                    background-image: url('../../../public/assets/bat-ellipse.png');
                     position: relative;
                     overflow: hidden;
-                    transition: all 0.8s $ease-in-out-back 0.8s;
+                    transition: background-image 0.8s $ease-in-out-back 0.8s, opacity 0.8s $ease-in-out-back 0.8s;
 
                     &::before {
                         content: "";
@@ -53,7 +53,7 @@
                         
                         &::before {
                             opacity: 1; // Show background image
-                            transition: opacity 0.8s $ease-in-out-back 0.8s;
+                            // transition: opacity 0.8s $ease-in-out-back 0.8s;
                         }
                     }
                     // &.active {
@@ -182,8 +182,27 @@
                         }
                     }
                 }
+
+
                
             }
+            .image-container {
+                // background-image: url('../../../public/assets/laptop-img.png');
+                // object-fit: fill;
+                // width: 690px;
+                // // max-width: 100%;
+                // height: 497.5px;
+                // margin-top: 134px;
+
+                // .laptop-icon {
+                    
+                //     position: relative;
+                //     max-width: 100%;
+                //     overflow: hidden;
+                //     object-fit: contain;
+                //     }
+            }
+            
         }
     }
 }

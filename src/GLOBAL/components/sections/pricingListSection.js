@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/pricing-list-section.scss";
 import PricingCard from "../../components/cards/pricingCard";
 import Arrow from "../Arrows";
+import MonthlyYearlyToggler from "../monthlyYearlyToggler";
 const PricingListSection = () => {
   const pricingData = [
     {
@@ -36,22 +37,7 @@ const PricingListSection = () => {
               </div>
               <b class="pricing-plans">Ready to Start a Business with Us</b>
             </div>
-            <div class="full-toggle-parent">
-              <div class="full-toggle">
-                <div class="monthly">Monthly</div>
-                <div class="rectangle-parent">
-                  <div class="rectangle1"></div>
-                  <div class="oval"></div>
-                </div>
-                <div class="yearly">Yearly</div>
-                <div class="tagtag-02">
-                  <div class="tag">
-                    <div class="rectangle"></div>
-                    <b class="save-25">Save 10%</b>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <MonthlyYearlyToggler/>
           </div>
           <div className="div34">
             <div className="pricing">

@@ -4,8 +4,10 @@ import Arrow from "../Arrows";
 import "../../../GLOBAL/styles/book-a-trip.scss";
 import ArrowedButton from "../buttons/arrowedButton";
 import TextBodyItem from "../textBodyItem";
-import { customerManagement, billingAndInvoicing, reportingAndAnalytics } from "../../../utils/assets";
+import { customerManagement, billingAndInvoicing, reportingAndAnalytics, laptopImg } from "../../../utils/assets";
 import Ellipses from "../ellipses";
+import iPhoneFrame from "../iPhone12Frame";
+
 const BookATripSection = ({ classNameName }) => {
   const items = [
     {
@@ -33,12 +35,13 @@ const BookATripSection = ({ classNameName }) => {
     }, 2000);
     return () => clearInterval(interval);
   }, [items.length]);
+  
   return (
     <section className="book-a-trip" id="book-a-trip">
       <div className="w-layout-blockcontainer section-padding-2 w-container">
         <div className="w-layout-blockcontainer content-container w-container">
           <div className="w-layout-blockcontainer text-body-side w-container">
-          <Ellipses itemsList={items} section="book-a-trip"/>
+          <Ellipses itemsList={items} activeIndex={activeIndex} section="book-a-trip"/>
           </div>
           <div className="w-layout-blockcontainer text-and-link-container w-container">
             <div className="book-a-trip-header">
@@ -58,7 +61,10 @@ const BookATripSection = ({ classNameName }) => {
               <ArrowedButton label="Learn More" className="margin-right"/>
             </div>
           </div>
-          <div className="w-layout-blockcontainer image-container w-container"></div>
+          <div className="w-layout-blockcontainer image-container w-container">
+            {/* <img className="laptop-icon" alt="" src={laptopImg}/> */}
+            <iPhoneFrame/>
+          </div>
         </div>
         <Arrow className="flex-align"/>
       </div>
