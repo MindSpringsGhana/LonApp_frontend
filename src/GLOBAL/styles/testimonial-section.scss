@@ -1,229 +1,214 @@
 @import "../../global";
 
 .testimonals-section {
-    height: 22.25rem;
-    margin-top: 10.625rem;
-    margin-bottom: 7.5rem;
+  height: 22.25rem;
+  margin-top: 10.625rem;
+  margin-bottom: 7.5rem;
 
-    .section-padding-6 {
+  .section-padding-6 {
+    max-width: none;
+    display: flex;
+    margin-left: 3.125rem;
+
+    .ts-content-container {
+      width: 72.813rem;
+      height: 22.25rem;
+      display: flex;
+      min-width: 0;
+      max-width: none;
+
+      .ts-header-container {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 2rem;
+
+        .container-3 {
+          margin-top: 5.125rem;
+          height: 12px;
+
+          .ts-ellipse {
+            display: inline-block;
+            margin-right: 1.625rem;
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            background-color: $neutral_300_color !important;
+            transition: all 0.7s $ease-in-out-back 0.7s;
+
+            &.ts-active {
+              background-color: $primary_color !important;
+              transition: all 0.7s $ease-in-out-back 0.7s;
+            }
+          }
+        }
+
+        .ts-sub-header {
+          color: $primary_color;
+          text-transform: uppercase;
+          margin-top: 0;
+          margin-bottom: 0;
+          font-family: Poppins, sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 100%;
+        }
+
+        .ts-main-header {
+          color: $secondary_color;
+          text-align: left;
+          width: 25.563rem;
+          margin-top: 0.5rem;
+          margin-bottom: 0;
+          font-family: Volkhov, sans-serif;
+          font-size: 2.1rem;
+          font-weight: 700;
+          line-height: 100%;
+        }
+      }
+
+      .testimonial-container {
+        position: relative;
+        width: 41.813rem;
         max-width: none;
         display: flex;
-
-        margin-left: 3.125rem;
-
-        .ts-content-container {
-            width: 72.813rem;
-            height: 22.25rem;
-            display: flex;
-
-            min-width: 0;
-            max-width: none;
-
-            .ts-header-container {
-                max-width: none;
-                margin-left: 0;
-
-                margin-right: 2rem;
-
-                .container-3 {
-                    margin-top: 5.125rem;
-                    // width: 87px;
-                    height: 12px;
-
-                    .ts-ellipse {
-                        display: inline-block;
-                        margin-right: 1.625rem;
-                        height: 12px;
-                        width: 12px;
-                        border-radius: 50px;
-                        background-color: $neutral_300_color !important;
-
-                        &.ts-active {
-                            background-color: $primary_color !important;
-                        }
-                    }
-                }
-
-                .ts-sub-header {
-                    color: $primary_color;
-                    text-transform: uppercase;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    font-family: Poppins, sans-serif;
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 100%;
-                }
-
-                .ts-main-header {
-                    color: $secondary_color;
-                    text-align: left;
-                    width: 25.563rem;
-                    margin-top: .5rem;
-                    margin-bottom: 0;
-                    font-family: Volkhov, sans-serif;
-                    font-size: 2.1rem;
-                    font-weight: 700;
-                    line-height: 100%;
-                }
-
-
-            }
-
-            .testimonial-container {
-                position: relative;
-                width: 41.813rem;
-                max-width: none;
-                display: flex;
-                margin-right: 0 !important
-                
-            }
-        }
+        margin-right: 0 !important;
+      }
     }
+  }
 }
-
-
-
-
-// .testimonials-section-child {
-//     position: absolute;
-//     height: 3.19%;
-//     width: 7.47%;
-//     top: 68.09%;
-//     right: 92.53%;
-//     bottom: 28.72%;
-//     left: 0%;
-//     max-width: 100%;
-//     overflow: hidden;
-//     max-height: 100%;
-// }
-
-
-
-
 
 .ts-card {
+  position: absolute;
+  height: 76.33%;
+  width: 80.87%;
+  top: 0%;
+  right: 19.13%;
+  bottom: 23.67%;
+  left: 0%;
+  font-size: 14px;
+  color: #5e6282;
+  transition: all 0.7s $ease-in-out-back 0.7s;
+
+  &.shadow-card {
+    height: 61.7%;
+    width: 75.04%;
+    top: 38.3%;
+    right: 13%;
+    bottom: 0%;
+    left: 11.96%;
+    z-index: -3;
+    transition: all 0.7s $ease-in-out-back 0.7s;
+  }
+
+  .group-item {
     position: absolute;
-    height: 76.33%;
-    width: 80.87%;
+    height: 88.15%;
+    width: 93.16%;
+    top: 11.85%;
+    right: 0%;
+    bottom: 0%;
+    left: 6.84%;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.81481170654297px 46.85px rgba(0, 0, 0, 0.02), 0px 38.51852035522461px 25.48px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.148148536682129px 6.52px rgba(0, 0, 0, 0.01), 0px 1.8518518209457397px 3.15px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: $tertiary_color;
+    transition: all 0.7s $ease-in-out-back 0.7s;
+  }
+
+  .group-child {
+    position: absolute;
+    height: 101.72%;
+    width: 100.8%;
     top: 0%;
-    right: 19.13%;
-    bottom: 23.67%;
+    right: -0.8%;
+    bottom: -1.72%;
     left: 0%;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.81481170654297px 46.85px rgba(0, 0, 0, 0.02), 0px 38.51852035522461px 25.48px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.148148536682129px 6.52px rgba(0, 0, 0, 0.01), 0px 1.8518518209457397px 3.15px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid #f7f7f7;
+    box-sizing: border-box;
+    transition: all 0.7s $ease-in-out-back 0.7s;
+  }
+
+  .ts-card-img {
+    position: absolute;
+    height: 20.91%;
+    width: 11.09%;
+    top: 0%;
+    right: 88.91%;
+    bottom: 79.09%;
+    left: 0%;
+    border-radius: 300px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+
+    &.visible {
+        opacity: 1;
+        transition: opacity 0.7s $ease-in-out-back 0.7s;
+      }
+  
+      &.hidden {
+        opacity: 0;
+        transition: opacity 0.7s $ease-in-out-back 0.7s;
+      }
+  }
+
+  .testimonial {
+    position: absolute;
+    width: 82.26%;
+    top: 15.68%;
+    left: 14.79%;
+    line-height: 32px;
+    font-weight: 500;
+    display: inline-block;
+    opacity: 0;
+    // transition: opacity 0.7s $ease-in-out-back;
+
+    &.visible {
+      opacity: 1;
+      transition: opacity 0.7s $ease-in-out-back 0.7s;
+    }
+
+    &.hidden {
+      opacity: 0;
+      transition: opacity 0.7s $ease-in-out-back 0.7s;
+    }
+  }
+
+  .ts-card-author {
+    position: absolute;
+    top: 67.24%;
+    left: 6.77%;
+    font-weight: 600;
+    opacity: 0.5;
+    transition: all 0.7s $ease-in-out-back 0.7s;
+
+    &.active {
+      opacity: 1;
+      top: 78.75%;
+      left: 14.79%;
+      font-size: 18px;
+      color: #1a96fc;
+      transition: all 0.7s $ease-in-out-back 0.7s;
+    }
+  }
+
+  .ts-card-position {
+    position: absolute;
+    top: 81.47%;
+    left: 6.77%;
     font-size: 14px;
+    font-weight: 500;
     color: #5e6282;
+    opacity: 0.5;
+    transition: all 0.7s $ease-in-out-back 0.7s;
 
-    &.shadow-card {
-        height: 61.7%;
-        width: 75.04%;
-        top: 38.3%;
-        right: 13%;
-        bottom: 0%;
-        left: 11.96%;
-        z-index: -3;
+    &.active {
+      opacity: 1;
+      top: 88.85%;
+      left: 14.79%;
+      transition: all 0.7s $ease-in-out-back 0.7s;
     }
-
-    .group-item {
-        position: absolute;
-        height: 88.15%;
-        width: 93.16%;
-        top: 11.85%;
-        right: 0%;
-        bottom: 0%;
-        left: 6.84%;
-        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.81481170654297px 46.85px rgba(0, 0, 0, 0.02), 0px 38.51852035522461px 25.48px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.148148536682129px 6.52px rgba(0, 0, 0, 0.01), 0px 1.8518518209457397px 3.15px rgba(0, 0, 0, 0);
-        border-radius: 10px;
-        background-color: $tertiary_color;
-    }
-
-    .group-child {
-        position: absolute;
-        height: 101.72%;
-        width: 100.8%;
-        top: 0%;
-        right: -0.8%;
-        bottom: -1.72%;
-        left: 0%;
-        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.81481170654297px 46.85px rgba(0, 0, 0, 0.02), 0px 38.51852035522461px 25.48px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.148148536682129px 6.52px rgba(0, 0, 0, 0.01), 0px 1.8518518209457397px 3.15px rgba(0, 0, 0, 0);
-        border-radius: 10px;
-        border: 2px solid #f7f7f7;
-        box-sizing: border-box;
-    }
-
-    .ts-card-img {
-        position: absolute;
-        height: 20.91%;
-        width: 11.09%;
-        top: 0%;
-        right: 88.91%;
-        bottom: 79.09%;
-        left: 0%;
-        border-radius: 300px;
-        max-width: 100%;
-        overflow: hidden;
-        max-height: 100%;
-        object-fit: cover;
-    }
-
-    .testimonial {
-        position: absolute;
-        width: 82.26%;
-        top: 15.68%;
-        left: 14.79%;
-        line-height: 32px;
-        font-weight: 500;
-        display: inline-block;
-    }
-
-    .ts-card-author {
-        position: absolute;
-        top: 67.24%;
-        left: 6.77%;
-        font-weight: 600;
-        opacity: 0.5;
-
-        &.active {
-            opacity: 1;
-            top: 78.75%;
-            left: 14.79%;
-            font-size: 18px;
-
-            color: #1a96fc;
-        }
-    }
-
-    .ts-card-position {
-
-        position: absolute;
-        top: 81.47%;
-        left: 6.77%;
-        font-size: 14px;
-        font-weight: 500;
-        color: #5e6282;
-        opacity: 0.5;
-    
-        &.active {
-            opacity: 1;
-            top: 88.85%;
-            left: 14.79%;
-        }
-    }
-    
-
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
