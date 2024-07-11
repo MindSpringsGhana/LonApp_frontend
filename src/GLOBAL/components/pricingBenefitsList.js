@@ -55,6 +55,7 @@ const PricingBenefitsList = () => {
           ))}
         </div>
       ))}
+      <i class="billed-separately-if">*Billed Separately if development work is required </i>
     </div>
   );
 };

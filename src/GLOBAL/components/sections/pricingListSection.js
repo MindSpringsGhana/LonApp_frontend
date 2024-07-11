@@ -3,7 +3,7 @@ import "../../styles/pricing-list-section.scss";
 import PricingCard from "../../components/cards/pricingCard";
 import Arrow from "../Arrows";
 import MonthlyYearlyToggler from "../monthlyYearlyToggler";
-import { tickCircle } from "../../../utils/assets";
+import { pricingSectionBg1, pricingSectionBg2 } from "../../../utils/assets";
 import PricingBenefitsList from "../pricingBenefitsList";
 const PricingListSection = () => {
   const pricingData = [
@@ -32,8 +32,11 @@ const PricingListSection = () => {
     <>
       <div className="travel-agency-landing-page-ui" id="pricing-list-section">
         <div className="ready-pricing-list-default">
+        <div className="pricing-section-bg1-container"><img className="pricing-section-bg1" src={pricingSectionBg1}/></div>
+        <div className="pricing-section-bg2-container"><img className="pricing-section-bg2" src={pricingSectionBg2}/></div>
           <div className="title-parent">
             <div class="title">
+              
               <div class="with-lots-of">
                 Choose the right plan for your business{" "}
               </div>
