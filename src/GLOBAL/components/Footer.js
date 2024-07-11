@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
         <Arrow/>
       </div>
-      <p className="copyrights">All rights reserved@mindspringLimited</p>
+      <p className="copyrights">Powered By MindSprings Limited</p>
     </section>
   );
 };
