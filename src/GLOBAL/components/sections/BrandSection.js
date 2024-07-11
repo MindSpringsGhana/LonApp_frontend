@@ -9,7 +9,7 @@ const LaundryBrandSection = ({ className }) => {
     <>
       <section className="laundry-brands-section background-color-1a96fc brands-section-styling" id="laundry-brands-section">
         <div className="w-layout-blockcontainer section-padding w-container">
-          <div className="w-layout-blockcontainer brands-container-styling w-container">
+          <div className="w-layout-blockcontainer brands-container-styling w-container" >
             <h2 className="laundry-brands-header brands-header-styling">
               Trusted by Serval Leading Laundry Service Providers Including
             </h2>
@@ -57,7 +57,7 @@ const LaundryBrandSection = ({ className }) => {
               </div>
             </div>
           </div>
-          <Arrow className="flex-align" nextSectionId="book-a-trip"/>
+          <Arrow style={{ marginLeft: "0" }} className="flex-align" nextSectionId="book-a-trip"/>
         </div>
       </section>
     </>

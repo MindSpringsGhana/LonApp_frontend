@@ -31,7 +31,7 @@
             right: 1085px;
             width: 450px;
             height: 368.97px;
-            
+
             .pricing-section-bg1 {
                 object-fit: cover;
                 width: 100%;
@@ -233,17 +233,17 @@
             font-family: Poppins;
             color: $neutral_600_color;
             text-align: left;
-            width: 86%;
+            width: 100%;
             padding: 10px 0;
             display: flex;
 
             // justify-content: space-between;
-            &:first-child::after,
+            &:first-child::after, &:last-child::after,
             &::before {
                 content: "";
                 position: absolute;
                 left: 0;
-                width: 100%;
+                width: 86%;
                 height: 1px;
                 background-color: $neutral_600_color;
                 opacity: 40%;
@@ -259,16 +259,24 @@
 
             .benefit-name {
                 display: flex;
-                width: 250px;
+                width: 265px;
                 // flex-shrink: 1;
             }
 
             .tick-circle {
-                margin-left: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 204px;
+                margin-right: 40px;
+                /* Match the width of pricing cards */
+                // margin-left: 0;
+                /* Remove automatic margin adjustments */
+                // margin-left: auto;
 
-                &::not(:last-child) {
-                    margin-right: auto;
-                }
+                // &:last-child {
+                //     // margin-right: auto;
+                // }
 
             }
 
@@ -285,15 +293,16 @@
         }
 
         .billed-separately-if {
-          
+
             position: relative;
             font-size: 16px;
             display: flex;
             font-family: Poppins;
-            background: $gradient_main; 
+            background: $gradient_main;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text; /* For some browsers that support only the standard syntax */
+            background-clip: text;
+            /* For some browsers that support only the standard syntax */
             color: transparent;
             text-align: left;
             align-items: center;

@@ -12,6 +12,9 @@
     // margin-left: 0;
     // margin-right: 0;
     // .brands-container-styling {
+    //     padding-right: 53px !important;
+    //     padding-left: 120px;
+    // }
     //     width: 95%;
     //     max-width: none;
     .laundry-brands-header.brands-header-styling {
@@ -34,7 +37,7 @@
 
     .brand-logos-container {
         justify-content: center;
-        align-items: flex-start;
+        align-items: center !important;
         width: 100%;
         max-width: none;
         height: 15rem;
@@ -51,13 +54,16 @@
             max-width: none;
             height: 15rem;
             margin-left: 0;
-            margin-right: 50px;
             display: flex;
+            &:not(:last-child) {
+                margin-right: 100px;
+            }
             .image-3 {
                 object-fit: contain;
                 width: 6.68rem;
                 height: 4.75rem;
                 margin-top: 1.875rem;
+                
             }
             // img {
             //     vertical-align: middle;
@@ -72,7 +78,7 @@
             justify-content: center;
             align-items: flex-start;
             width: 15.063rem;
-            margin-right: 50px;
+            margin-right: 100px;
             display: flex;
         }
     }

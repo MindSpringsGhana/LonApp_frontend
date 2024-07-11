@@ -60,7 +60,7 @@ import React from "react";
 import "../../GLOBAL/styles/arrows.scss";
 import { arrowDown, arrowUp } from "../../utils/assets";
 
-const Arrow = ({ className, variant, onNext, onPrev, nextSectionId, prevSectionId }) => {
+const Arrow = ({ className, style, variant, onNext, onPrev, nextSectionId, prevSectionId }) => {
   const isTestimonial = variant === 'testimonial';
 
   // const scrollToSection = (sectionId) => {
@@ -71,7 +71,7 @@ const Arrow = ({ className, variant, onNext, onPrev, nextSectionId, prevSectionI
   // };
 
   return (
-    <div className={`w-layout-blockcontainer arrow-buttons-wrapper w-container ${className}`}>
+    <div className={`w-layout-blockcontainer arrow-buttons-wrapper w-container ${className}`} style={style}>
       <div className="w-layout-blockcontainer arrow-buttons-container w-container arrow-margin-bottom">
         <img
           src={isTestimonial ? "https://cdn.prod.website-files.com/660d31df598571a9a961b06f/66117840748f5c1dc23f20ac_arrow%20up%202.svg" : arrowUp}
