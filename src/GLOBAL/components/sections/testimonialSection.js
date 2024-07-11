@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     id: 2,
-    text: "Another testimonial text goes here.",
+    text: "LonApp has truly revolutionized the way we manage our laundry business at City Laundry. As the CEO, I've seen firsthand the incredible impact it's had on our efficiency, customer satisfaction, and overall operations. Thank you, LonApp, for being an invaluable partner in our success!",
     author: "Chris Thomas",
     position: "CEO of Red Button",
     image: "path-to-image.jpg", // replace with the correct path to the image if necessary
@@ -38,7 +38,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="testimonals-section">
+    <section className="testimonals-section" id="testimonial-section">
       <div className="w-layout-blockcontainer section-padding-6 w-container">
         <div className="w-layout-blockcontainer ts-content-container w-container">
           <div className="w-layout-blockcontainer ts-header-container w-container">

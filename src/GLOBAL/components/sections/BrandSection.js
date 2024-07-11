@@ -4,7 +4,7 @@ import "../../../GLOBAL/styles/brand-section.scss";
 import { brandImage1, brandImage2, brandImage3, brandImage4, brandImage5 } from "../../../utils/assets";
 import Arrow from "../Arrows";
 
-const LaundryBrandSection = ({ classNameName }) => {
+const LaundryBrandSection = ({ className }) => {
   return (
     <>
       <section className="laundry-brands-section background-color-1a96fc brands-section-styling" id="laundry-brands-section">
@@ -57,7 +57,7 @@ const LaundryBrandSection = ({ classNameName }) => {
               </div>
             </div>
           </div>
-          <Arrow className="flex-align"/>
+          <Arrow className="flex-align" nextSectionId="book-a-trip"/>
         </div>
       </section>
     </>

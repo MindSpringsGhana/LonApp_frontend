@@ -1,0 +1,27 @@
+// src/components/iPhoneFrame.scss
+.iphone-frame {
+    position: relative;
+    width: 689.77px; /* Adjust the size as needed */
+    height: 497.52px;
+  
+    .iphone-frame-img {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .iphone-content {
+      position: absolute;
+      top: 220px; /* Adjust based on the frame's design */
+      left: 20px; /* Adjust based on the frame's design */
+      width: calc(100% - 40px); /* Adjust based on the frame's design */
+      height: calc(100% - 40px); /* Adjust based on the frame's design */
+      overflow: hidden;
+    }
+  }
+
+  .bat-overlay-img {
+    height: 240px;
+    transform: rotate(3deg);
+    translate: 10px ;
+  }
+  

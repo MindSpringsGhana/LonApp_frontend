@@ -19,3 +19,6 @@ export const newsletterBackgroundImg = '/assets/svg/newsletter-background-img.sv
 export const nssStarsImg = '/assets/nss-stars.png'
 export const headerImg = '/assets/pricing-header-img.png'
 export const batImg = '/assets/bat-img.png'
+export const batOverlay = '/assets/bat-overlay1.png'
+export const tickCircle = '/assets/tick-circle.png'
+export const tickCircleDisabled = '/assets/tick-circle-disabled.png'

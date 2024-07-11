@@ -3,7 +3,7 @@
     width: 100%;
     position: relative;
     background-color: $tertiary_color;
-    height: 600px;
+    height: auto;
     overflow: hidden;
     text-align: left;
     font-size: 18px;
@@ -21,11 +21,11 @@
     }
 
     .ready-pricing-list-default {
-        position: absolute;
+        // position: absolute;
         // top: 2123px;
-        left: -131px;
-        width: 1616px;
-        height: 1802.6px;
+        // left: -131px;
+        width: 100%;
+        height: auto;
         font-size: 16px;
         color: #4b4b4b;
 
@@ -80,9 +80,11 @@
     }
 
     .div34 {
-        position: absolute;
-        top: 286px;
-        right: 5px;
+        // position: absolute;
+        // top: 286px;
+        // right: 5px;
+        margin-top: 74px;
+        margin-left: auto;
         width: 1109px;
         height: 266px;
         font-size: 13px;
@@ -91,9 +93,9 @@
         .pricing {
        
             align-self: stretch;
-            display: flex;
+            display: flex !important;
             flex-direction: row;
-            align-items: flex-start;
+            align-items: flex-end;
             justify-content: flex-start;
             padding: 11px 31px;
             gap: 40px;
@@ -178,6 +180,74 @@
                     font-size: 18px;
                 }
             }
+        }
+    }
+
+    .pack-benefits-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 1284px;
+        margin-right: 63.99px;
+        margin-left: 99px;
+        .pack-header {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: Poppins;
+            color: $primary_color;
+            text-align: left;
+        }
+        .pack-benefit {
+            position: relative;
+            font-size: 16px;
+            font-family: Poppins;
+            color: $neutral_600_color;
+            text-align: left;
+            width: 86%;
+            padding: 10px 0;
+            display: flex;
+            // justify-content: space-between;
+            &:first-child::after, &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $neutral_600_color;
+                opacity: 40%;
+              }
+              &::before {
+                top: 0;
+              }
+
+              &::after {
+                bottom: 0;
+              }
+
+              .benefit-name {
+                display: flex;
+                width: 250px;
+                // flex-shrink: 1;
+              }
+
+              .tick-circle {
+                margin-left: auto;
+
+                &::not(:last-child) {
+                    margin-right: auto;
+                }
+               
+              }
+              
+            //   &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: 0;
+            //     width: 90%;
+            //     height: 1px;
+            //     background-color: $neutral_600_color;
+            //     opacity: 40%;
+            //   }
         }
     }
     // .div35 {

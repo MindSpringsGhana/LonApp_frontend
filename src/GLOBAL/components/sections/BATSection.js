@@ -4,9 +4,12 @@ import Arrow from "../Arrows";
 import "../../../GLOBAL/styles/book-a-trip.scss";
 import ArrowedButton from "../buttons/arrowedButton";
 import TextBodyItem from "../textBodyItem";
-import { customerManagement, billingAndInvoicing, reportingAndAnalytics, laptopImg } from "../../../utils/assets";
+import { customerManagement, billingAndInvoicing, reportingAndAnalytics, batOverlay } from "../../../utils/assets";
 import Ellipses from "../ellipses";
-import iPhoneFrame from "../iPhone12Frame";
+
+import BATFrame from '../iPhone12Frame'
+
+
 
 const BookATripSection = ({ classNameName }) => {
   const items = [
@@ -63,10 +66,13 @@ const BookATripSection = ({ classNameName }) => {
           </div>
           <div className="w-layout-blockcontainer image-container w-container">
             {/* <img className="laptop-icon" alt="" src={laptopImg}/> */}
-            <iPhoneFrame/>
+           
+            <BATFrame>
+              <img className="bat-overlay-img" alt="" src={batOverlay}/>
+              </BATFrame>
           </div>
         </div>
-        <Arrow className="flex-align"/>
+        <Arrow className="flex-align" prevSectionId="laundry-brands-section" nextSectionId="pricing-list-section"  />
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ const HeroSection = ({ label, action, page, isDisabled = false }) => {
             </div>
             
           </div>
-          <Arrow className="flex-align"/>
+          <Arrow className="flex-align" nextSectionId="laundry-brands-section"/>
         </div>
       </section>
     </>

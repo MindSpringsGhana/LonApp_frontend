@@ -3,6 +3,8 @@ import "../../styles/pricing-list-section.scss";
 import PricingCard from "../../components/cards/pricingCard";
 import Arrow from "../Arrows";
 import MonthlyYearlyToggler from "../monthlyYearlyToggler";
+import { tickCircle } from "../../../utils/assets";
+import PricingBenefitsList from "../pricingBenefitsList";
 const PricingListSection = () => {
   const pricingData = [
     {
@@ -28,7 +30,7 @@ const PricingListSection = () => {
   ];
   return (
     <>
-      <div className="travel-agency-landing-page-ui">
+      <div className="travel-agency-landing-page-ui" id="pricing-list-section">
         <div className="ready-pricing-list-default">
           <div className="title-parent">
             <div class="title">
@@ -37,7 +39,7 @@ const PricingListSection = () => {
               </div>
               <b class="pricing-plans">Ready to Start a Business with Us</b>
             </div>
-            <MonthlyYearlyToggler/>
+            <MonthlyYearlyToggler />
           </div>
           <div className="div34">
             <div className="pricing">
@@ -51,30 +53,9 @@ const PricingListSection = () => {
               ))}
               <Arrow />
             </div>
-			{/* <div className="div35"><div class="div-parent">
-           
-         
-            <div class="customer-engagment">Customer Engagment</div>
-           <div class="group-wrapper8">
-              <div class="customer-self-service-parent">
-                <div class="customer-self-service">Customer Self-Service </div>
-				<img class="group-child8" alt="" src="Group 39534.svg" />
-                <img class="group-child8" alt="" src="Group 39534.svg" />
 
-              </div>
-			  
-            </div>
-
-            <div class="span14">
-              <i class="billed-separately-if">
-                *Billed Separately if development work is required{" "}
-              </i>
-            </div>
-          </div></div> */}
-			
           </div>
-
-         
+          <PricingBenefitsList/>
         </div>
       </div>
     </>

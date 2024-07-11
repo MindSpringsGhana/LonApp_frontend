@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/iphone-frame.scss'; // Ensure you create the corresponding SCSS file
 import {batImg} from '../../utils/assets'; // Adjust the path as needed
 
-const iPhoneFrame = ({ children }) => {
+const BATFrame = ({ children }) => {
   return (
     <div className="iphone-frame">
       <img src={batImg} alt="iPhone Frame" className="iphone-frame-img" />
@@ -14,4 +14,4 @@ const iPhoneFrame = ({ children }) => {
   );
 };
 
-export default iPhoneFrame;
+export default BATFrame;

@@ -60,8 +60,16 @@ import React from "react";
 import "../../GLOBAL/styles/arrows.scss";
 import { arrowDown, arrowUp } from "../../utils/assets";
 
-const Arrow = ({ className, variant, onNext, onPrev }) => {
+const Arrow = ({ className, variant, onNext, onPrev, nextSectionId, prevSectionId }) => {
   const isTestimonial = variant === 'testimonial';
+
+  // const scrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
   return (
     <div className={`w-layout-blockcontainer arrow-buttons-wrapper w-container ${className}`}>
       <div className="w-layout-blockcontainer arrow-buttons-container w-container arrow-margin-bottom">
@@ -70,6 +78,7 @@ const Arrow = ({ className, variant, onNext, onPrev }) => {
           loading="lazy"
           alt=""
           className={isTestimonial ? "ts-arrow-up-style" : "arrow-up-style"}
+          // onClick={isTestimonial ? onPrev : scrollToSection(prevSectionId) }
           onClick={onPrev}
         />
         <img
@@ -78,6 +87,7 @@ const Arrow = ({ className, variant, onNext, onPrev }) => {
           alt=""
           className={isTestimonial ? "ts-arrow-down" : ""}
           onClick={onNext}
+          // onClick={isTestimonial ? onNext : scrollToSection(nextSectionId)}
         />
       </div>
     </div>
