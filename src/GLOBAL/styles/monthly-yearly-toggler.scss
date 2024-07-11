@@ -29,7 +29,7 @@
             right: 53.76%;
             bottom: 0%;
             left: 23.39%;
-
+            cursor: pointer;
             .rectangle1 {
                 position: absolute;
                 height: 100%;
@@ -53,6 +53,11 @@
                 border-radius: 50%;
                 background-color: $tertiary_color;
                 height: 30px;
+
+                &.yearly {
+                    right: 10.59% !important;
+                    left: 54.12% !important;
+                }
             }
         }
         .yearly {
