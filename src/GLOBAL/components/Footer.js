@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Footer.scss'
 import Arrow from './Arrows';
 import FooterSocialLinks from './socialLinks';
+import { lonAppLogo } from '../../utils/assets';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="w-layout-blockcontainer section-padding-8 w-container">
         <div className="rl_layout239_content-2">
           <div id="w-node-_42e13a9a-e3a7-d551-4910-515ef108b98c-a961b083" className="w-layout-blockcontainer company-desc cd-header w-container">
-            <img src="https://cdn.prod.website-files.com/660d31df598571a9a961b06f/66645f99a6e8132a2025925c_LonApp.png" loading="lazy" alt="" />
+            <img src={lonAppLogo} loading="lazy" alt="" />
             <p className="cd-paragraph">We contribute to empowering every aspect of your laundry</p>
           </div>
           <div id="w-node-_09932f30-e8f8-a8c1-503d-b26c5d5c50be-a961b083" className="w-layout-blockcontainer footer-links-container w-container">

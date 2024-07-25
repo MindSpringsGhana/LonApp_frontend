@@ -16,8 +16,6 @@
 
     .ready-pricing-list-default {
         position: relative !important;
-        // top: 2123px;
-        // left: -131px;
         width: 100%;
         height: auto;
         font-size: 16px;
@@ -109,9 +107,7 @@
     }
 
     .div34 {
-        // position: absolute;
-        // top: 286px;
-        // right: 5px;
+      
         margin-top: 74px;
         margin-left: auto;
         width: 1109px;
@@ -269,27 +265,11 @@
                 align-items: center;
                 width: 204px;
                 margin-right: 40px;
-                /* Match the width of pricing cards */
-                // margin-left: 0;
-                /* Remove automatic margin adjustments */
-                // margin-left: auto;
-
-                // &:last-child {
-                //     // margin-right: auto;
-                // }
+             
 
             }
 
-            //   &::after {
-            //     content: "";
-            //     position: absolute;
-            //     bottom: 0;
-            //     left: 0;
-            //     width: 90%;
-            //     height: 1px;
-            //     background-color: $neutral_600_color;
-            //     opacity: 40%;
-            //   }
+            
         }
 
         .billed-separately-if {

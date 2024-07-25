@@ -33,11 +33,11 @@
             width: 12px;
             border-radius: 50px;
             background-color: $neutral_300_color !important;
-            transition: all 0.7s $ease-in-out-back 0.7s;
+            transition: all 0.5s $ease-in-out-back 0.5s;
 
             &.ts-active {
               background-color: $primary_color !important;
-              transition: all 0.7s $ease-in-out-back 0.7s;
+              transition: all 0.5s $ease-in-out-back 0.5s;
             }
           }
         }
@@ -87,7 +87,7 @@
   left: 0%;
   font-size: 14px;
   color: #5e6282;
-  transition: all 0.7s $ease-in-out-back 0.7s;
+  transition: all 0.5s $ease-in-out-back 0.5s;
 
   &.shadow-card {
     height: 61.7%;
@@ -97,7 +97,7 @@
     bottom: 0%;
     left: 11.96%;
     z-index: -3;
-    transition: all 0.7s $ease-in-out-back 0.7s;
+    transition: all 0.5s $ease-in-out-back 0.5s;
   }
 
   .group-item {
@@ -111,7 +111,7 @@
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.81481170654297px 46.85px rgba(0, 0, 0, 0.02), 0px 38.51852035522461px 25.48px rgba(0, 0, 0, 0.01), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.148148536682129px 6.52px rgba(0, 0, 0, 0.01), 0px 1.8518518209457397px 3.15px rgba(0, 0, 0, 0);
     border-radius: 10px;
     background-color: $tertiary_color;
-    transition: all 0.7s $ease-in-out-back 0.7s;
+    transition: all 0.5s $ease-in-out-back 0.5s;
   }
 
   .group-child {
@@ -126,7 +126,7 @@
     border-radius: 10px;
     border: 2px solid #f7f7f7;
     box-sizing: border-box;
-    transition: all 0.7s $ease-in-out-back 0.7s;
+    transition: all 0.5s $ease-in-out-back 0.5s;
   }
 
   .ts-card-img {
@@ -145,12 +145,12 @@
 
     &.visible {
         opacity: 1;
-        transition: opacity 0.7s $ease-in-out-back 0.7s;
+        transition: opacity 0.5s $ease-in-out-back 0.5s;
       }
   
       &.hidden {
         opacity: 0;
-        transition: opacity 0.7s $ease-in-out-back 0.7s;
+        transition: opacity 0.5s $ease-in-out-back 0.5s;
       }
   }
 
@@ -163,16 +163,16 @@
     font-weight: 500;
     display: inline-block;
     opacity: 0;
-    // transition: opacity 0.7s $ease-in-out-back;
+    // transition: opacity 0.5s $ease-in-out-back;
 
     &.visible {
       opacity: 1;
-      transition: opacity 0.7s $ease-in-out-back 0.7s;
+      transition: opacity 0.5s $ease-in-out-back 0.5s;
     }
 
     &.hidden {
       opacity: 0;
-      transition: opacity 0.7s $ease-in-out-back 0.7s;
+      transition: opacity 0.5s $ease-in-out-back 0.5s;
     }
   }
 
@@ -182,7 +182,7 @@
     left: 6.77%;
     font-weight: 600;
     opacity: 0.5;
-    transition: all 0.7s $ease-in-out-back 0.7s;
+    transition: all 0.5s $ease-in-out-back 0.5s;
 
     &.active {
       opacity: 1;
@@ -190,7 +190,7 @@
       left: 14.79%;
       font-size: 18px;
       color: #1a96fc;
-      transition: all 0.7s $ease-in-out-back 0.7s;
+      transition: all 0.5s $ease-in-out-back 0.5s;
     }
   }
 
@@ -202,13 +202,13 @@
     font-weight: 500;
     color: #5e6282;
     opacity: 0.5;
-    transition: all 0.7s $ease-in-out-back 0.7s;
+    transition: all 0.5s $ease-in-out-back 0.5s;
 
     &.active {
       opacity: 1;
       top: 88.85%;
       left: 14.79%;
-      transition: all 0.7s $ease-in-out-back 0.7s;
+      transition: all 0.5s $ease-in-out-back 0.5s;
     }
   }
 }

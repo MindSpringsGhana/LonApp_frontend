@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.scss'
+import { lonAppLogo } from '../../utils/assets';
 
 const Header = () => {
   return (
@@ -20,7 +21,7 @@ const Header = () => {
             </div>
           </div> */}
           <div className="navbar-brand">
-            <img src="https://cdn.prod.website-files.com/660d31df598571a9a961b06f/66645f99a6e8132a2025925c_LonApp.png" loading="lazy" alt="" />
+            <img src={lonAppLogo} loading="lazy" alt="" />
           </div>
           <nav role="navigation" className="navbar-menu w-nav-menu">
             <a href="#" className="navbar-link w-nav-link" style={{ maxWidth: '1200px' }}>

@@ -1,0 +1,11 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mdi:email-alert-outline">
+<path id="Vector" d="M50 14.5833H45.8333V27.0833H50V14.5833ZM50 31.2499H45.8333V35.4166H50V31.2499ZM41.6667 12.4999C41.6667 10.2083 39.7917 8.33325 37.5 8.33325H4.16667C1.875 8.33325 0 10.2083 0 12.4999V37.4999C0 39.7916 1.875 41.6666 4.16667 41.6666H37.5C39.7917 41.6666 41.6667 39.7916 41.6667 37.4999V12.4999ZM37.5 12.4999L20.8333 22.9166L4.16667 12.4999H37.5ZM37.5 37.4999H4.16667V16.6666L20.8333 27.0833L37.5 16.6666V37.4999Z" fill="url(#paint0_linear_339_17430)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_339_17430" x1="25" y1="8.33325" x2="25" y2="41.6666" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0061FF"/>
+<stop offset="1" stop-color="#60EFFF"/>
+</linearGradient>
+</defs>
+</svg>

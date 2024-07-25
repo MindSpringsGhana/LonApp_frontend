@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-const Ellipses = ({ className, itemsList, currentIndex, activeIndex, section }) => {
+const Ellipses = ({
+  className,
+  itemsList,
+  currentIndex,
+  activeIndex,
+  section,
+}) => {
   // const [activeIndex, setActiveIndex] = useState(0);
   // console.log(activeIndex)
 
