@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./_global.scss";
 import Landing from "./GLOBAL/pages/LandingPage";
-import LoginPage from "./GLOBAL/pages/loginPage";
+import LoginPage from "./GLOBAL/pages/LoginPage.js";
 import ResetPasswordPage from "./GLOBAL/pages/resetPasswordPage";
 import ResetPasswordConfirmPage from "./GLOBAL/pages/resetPasswordConfirmPage";
 function App() {
