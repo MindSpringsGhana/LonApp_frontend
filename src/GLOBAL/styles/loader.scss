@@ -46,18 +46,18 @@
     flex-shrink: 0;
     object-fit: cover;
     background-image: url('../../../public/assets/loader-initial.png');
-    animation: loaderAnimation 1s infinite alternate;
+    // animation: loaderAnimation 1s infinite alternate;
 
-    // Define the animation keyframes
-    @keyframes loaderAnimation {
-        0% {
-            background-image: url('../../../public/assets/loader-initial.png');
-        }
+    // // Define the animation keyframes
+    // @keyframes loaderAnimation {
+    //     0% {
+    //         background-image: url('../../../public/assets/loader-initial.png');
+    //     }
 
-        100% {
-            background-image: url('../../../public/assets/loader-final.png');
-        }
-    }
+    //     100% {
+    //         background-image: url('../../../public/assets/loader-final.png');
+    //     }
+    // }
 }
 
 .progress-bar {
