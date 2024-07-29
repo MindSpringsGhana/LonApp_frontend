@@ -276,7 +276,7 @@ const Step1 = () => {
             <PhoneNumberInput
               name="phoneNumber"
               value={formValues.phoneNumber}
-              onChange={handlePhoneChange}
+              onChange={handleChange}
               error={error}
               inputStarted={inputStarted}
             />
