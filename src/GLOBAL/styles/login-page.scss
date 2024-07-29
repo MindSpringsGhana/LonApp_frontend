@@ -18,10 +18,20 @@ main {
         margin-right: 169px;
         margin-top: 245px;
 
+        &.signup-main-wrapper {
+            margin-top: 50px;
+            height: 810px !important;
+            padding: none;
+        }
+
         .login-main {
             display: flex;
             flex-direction: column;
             width: 424px;
+
+            &.signup-main {
+                width: 597px;
+            }
 
             .login-main-header {
                 display: flex;
@@ -63,9 +73,11 @@ main {
 
                         &.reset-password-header-paragraph {
                             text-align: left;
+
                             &.successfully-sent-hp {
-                                width: 379px;   
+                                width: 379px;
                             }
+
                             span {
                                 color: $primary-color;
                             }
@@ -80,17 +92,58 @@ main {
                         align-items: center;
                         gap: 10px;
                         margin-top: 17px;
+
                         .successfully-sent-paragraph {
                             color: $neutral_700_color;
                             font-size: 14px;
                             font-weight: 500;
-                            
+
                         }
+
                         .successfully-sent-tick {
                             width: 22px;
                             height: 22px;
-            
+
                         }
+                    }
+
+                    .sign-up-step-wrapper {
+                        display: flex;
+                        margin-top: 7px;
+
+                        .step-text {
+                            font-size: 14px;
+                            font-weight: 500;
+                            font-family: Poppins;
+                            color: $sign_up_step_color;
+                        }
+
+                        .step-vectors-wrapper {
+                            margin-left: 12px;
+                            display: flex;
+                            justify-content: flex-start;
+                            gap: 13px;
+                            align-items: center;
+
+                            .active-step-img {
+                                height: 8px;
+                                width: 28px;
+                                border-radius: 20px;
+                                background-color: $primary-color
+                            }
+
+                            .inactive-step-img {
+                                height: 6px;
+                                width: 6px;
+                                border-radius: 20px;
+                                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #8e8e8e;
+                                opacity: 0.6;
+                            }
+                        }
+
+
+
+
                     }
                 }
 
@@ -111,12 +164,28 @@ main {
                 color: $neutral_600_color;
                 font-family: Inter;
 
+                &.sign-up-form {
+                    padding-top: 47px;
+                }
+
+                .form-row {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 32px;
+                    margin-bottom: 29.5px;
+                }
+
                 .form-group {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 8px;
                     width: 100%;
+
+                    &.email-form-group {
+                        margin-bottom: 17px;
+                    }
 
                     &:first-child {
                         margin-bottom: 14px;
@@ -129,6 +198,26 @@ main {
                         text-align: left;
                         display: flex;
                         align-items: center;
+
+                        .file-upload-label {
+                            color: $neutral_400_color;
+                        }
+
+                    }
+
+                    & select {
+                        background-position: right 22px center !important;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background: url('../../../public/assets/select-dropdown-img.png') no-repeat right 10px center;
+                        background-size: 11.67px;
+                        width: 100%;
+                        font-size: 14px;
+                        color: #333333;
+                        border: 1px solid #e0e0e0;
+                        border-radius: 4px;
+                        transition: border-color 0.2s;
                     }
 
                     .form-control {
@@ -139,6 +228,17 @@ main {
                         color: $form_field_text_color;
                         border: none;
                         padding: 14px 0 16px 16px;
+
+                        &.select-form-control {
+                            padding-top: 10px !important;
+                            padding-bottom: 10px !important;
+
+                        }
+
+
+                        &.phone-form-control {
+                            padding-left: 40px;
+                        }
 
                         &:active,
                         &:focus {
@@ -158,7 +258,7 @@ main {
                             }
                         }
 
-                        
+
                     }
                 }
 
@@ -180,6 +280,7 @@ main {
                     margin-top: 8px;
                     margin-bottom: 26px;
                     font-size: 14px;
+
                     .forgot-password-link {
                         font-family: Poppins;
                         color: #1a96fc;
@@ -208,11 +309,12 @@ main {
                 text-align: left;
                 line-height: 14px;
                 margin-top: 18px;
-                font-size: 14px ;
+                font-size: 14px;
 
                 &.ss-margin-top {
                     margin-top: 33px;
                 }
+
                 .create-account-link {
                     text-decoration: none;
                     color: #1a96fc;
