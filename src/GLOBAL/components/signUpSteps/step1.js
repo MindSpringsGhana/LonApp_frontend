@@ -1,182 +1,11 @@
-// import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-
-// // COMPONENTS
-// import FileUpload from "../../components/fileUpload";
-// import PhoneNumberInput from "../../components/phoneNumberInput";
-// import { Link } from "react-router-dom";
-// import "../../styles/loader.scss";
-// import { loaderImg } from "../../../utils/assets";
-// import { setInputStarted } from '../../redux/slice/formSlice';
-
-// const Step1 = () => {
-//   const dispatch = useDispatch();
-//   const { isLoading } = useSelector((state) => state.auth);
-//   const { inputStarted } = useSelector((state) => state.form);
-  
-//   const [formValues, setFormValues] = useState({
-//     laundryCompanyName: "",
-//     emailAddress: "",
-//     phoneNumber: "",
-//     whatsAppNumber: "",
-//     country: "",
-//     gpsAddress: "",
-//     transactingCurrency: "",
-//   });
-
-//   const [error, setError] = useState(false);
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     dispatch(setInputStarted(e.target.value.length > 0))
-//     setFormValues((prevValues) => ({
-//       ...prevValues,
-//       [name]: value
-//     }));
-//   };
-
-//   const handlePhoneChange = (value) => {
-//     setFormValues((prevValues) => ({
-//       ...prevValues,
-//       phoneNumber: value
-//     }));
-//   };
-  
-//   return (
-//     <>
-//       <div className="login-form sign-up-form">
-//         <div className="form-row">
-//           <div className="form-group">
-//             <label className="field-label">Laundry Company Name</label>
-//             <input
-//               className={`form-control ${error && "error"} ${
-//                 inputStarted && "entry-background"
-//               }`}
-//               placeholder="City Laundry"
-//               type="text"
-//               name="laundryCompanyName"
-//               value={formValues.laundryCompanyName}
-//               onChange={handleChange}
-//             />
-//           </div>
-//           <div className="form-group">
-//             <label className="field-label">Country</label>
-//             <select
-//               className={`form-control ${error && "error"} ${
-//                 inputStarted && "entry-background"
-//               } select-form-control`}
-//               name="country"
-//               value={formValues.country}
-//               onChange={handleChange}
-//             >
-//               <option value="" disabled>
-//                 Please Select
-//               </option>
-//               <option value="USD">USD</option>
-//               <option value="EUR">EUR</option>
-//               <option value="GBP">GBP</option>
-//             </select>
-//           </div>
-//         </div>
-//         <div className="form-group email-form-group">
-//           <label className="field-label">Email Address</label>
-//           <input
-//             className={`form-control ${error && "error"} ${
-//               inputStarted && "entry-background"
-//             }`}
-//             placeholder="City Laundry@gmail.com"
-//             type="text"
-//             name="emailAddress"
-//             value={formValues.emailAddress}
-//             onChange={handleChange}
-//           />
-//         </div>
-//         <div className="form-row">
-//           <div className="form-group">
-//             <label className="field-label">Phone Number</label>
-//             <PhoneNumberInput
-//               name="phoneNumber"
-//               value={formValues.phoneNumber}
-//               onChange={handleChange}
-//               error={error}
-//               inputStarted={inputStarted}
-//             />
-//           </div>
-//           <div className="form-group">
-//             <label className="field-label">WhatsApp Number (Optional)</label>
-//             <input
-//               className={`form-control ${error && "error"} ${
-//                 inputStarted && "entry-background"
-//               }`}
-//               type="text"
-//               name="whatsAppNumber"
-//               placeholder="+233 24 522 4993"
-//               value={formValues.whatsAppNumber}
-//               onChange={handleChange}
-//             />
-//           </div>
-//         </div>
-//         <div className="form-row">
-//           <div className="form-group">
-//             <label className="field-label">GPS Address</label>
-//             <input
-//               className={`form-control ${error && "error"} ${
-//                 inputStarted && "entry-background"
-//               }`}
-//               placeholder="GW-0156-7811"
-//               type="text"
-//               name="gpsAddress"
-//               value={formValues.gpsAddress}
-//               onChange={handleChange}
-//             />
-//           </div>
-//           <div className="form-group">
-//             <label className="field-label">Transacting Currency</label>
-//             <select
-//               className={`form-control ${error && "error"} ${
-//                 inputStarted && "entry-background"
-//               } select-form-control`}
-//               name="transactingCurrency"
-//               value={formValues.transactingCurrency}
-//               onChange={handleChange}
-//             >
-//               <option value="" disabled>
-//                 Please Select
-//               </option>
-//               <option value="USD">USD</option>
-//               <option value="EUR">EUR</option>
-//               <option value="GBP">GBP</option>
-//             </select>
-//           </div>
-//         </div>
-//         <div className="form-group">
-//           <label className="field-label">
-//             Upload Laundry Logo Image <span className="file-upload-label">(Optional)</span>
-//           </label>
-//           <FileUpload />
-//         </div>
-//         {error && (
-//           <div className="form-error-text">
-//             <p>Username or password did not match</p>
-//           </div>
-//         )}
-//         {/* <div className="form-help-text">
-//           <Link className="forgot-password-link" to="/reset-password">
-//             Forgot Password?
-//           </Link>
-//         </div> */}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Step1;
-
+// components/Step1.js
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import FileUpload from "../../components/fileUpload";
-import PhoneNumberInput from "../../components/phoneNumberInput";
-import { setInputStarted } from '../../redux/slice/formSlice';
+import FileUpload from "../formInputs/fileUpload";
+import PhoneNumberInput from "../formInputs/phoneNumberInput";
+import SelectInput from "../../components/formInputs/selectInput";
+import TextInput from "../../components/formInputs/textInput";
+import { setInputStarted } from "../../redux/slice/formSlice";
 
 const Step1 = () => {
   const dispatch = useDispatch();
@@ -190,7 +19,7 @@ const Step1 = () => {
     country: "",
     gpsAddress: "",
     transactingCurrency: "",
-    logo: null // Add this line to manage the logo
+    logo: null,
   });
 
   const [error, setError] = useState(false);
@@ -200,23 +29,15 @@ const Step1 = () => {
     dispatch(setInputStarted(value.length > 0));
     setFormValues((prevValues) => ({
       ...prevValues,
-      [name]: value
-    }));
-  };
-
-  const handlePhoneChange = (value) => {
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      phoneNumber: value
+      [name]: value,
     }));
   };
 
   const handleFileChange = (acceptedFiles) => {
-    // Assuming you want to handle one file; adjust as necessary
     if (acceptedFiles.length > 0) {
       setFormValues((prevValues) => ({
         ...prevValues,
-        logo: acceptedFiles[0] // Store the file object in the state
+        logo: acceptedFiles[0],
       }));
     }
   };
@@ -225,51 +46,38 @@ const Step1 = () => {
     <>
       <div className="login-form sign-up-form">
         <div className="form-row">
-          <div className="form-group">
-            <label className="field-label">Laundry Company Name</label>
-            <input
-              className={`form-control ${error && "error"} ${
-                inputStarted && "entry-background"
-              }`}
-              placeholder="City Laundry"
-              type="text"
-              name="laundryCompanyName"
-              value={formValues.laundryCompanyName}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label className="field-label">Country</label>
-            <select
-              className={`form-control ${error && "error"} ${
-                inputStarted && "entry-background"
-              } select-form-control`}
-              name="country"
-              value={formValues.country}
-              onChange={handleChange}
-            >
-              <option value="" disabled>
-                Please Select
-              </option>
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
-          </div>
-        </div>
-        <div className="form-group email-form-group">
-          <label className="field-label">Email Address</label>
-          <input
-            className={`form-control ${error && "error"} ${
-              inputStarted && "entry-background"
-            }`}
-            placeholder="City Laundry@gmail.com"
-            type="text"
-            name="emailAddress"
-            value={formValues.emailAddress}
+          <TextInput
+            label="Laundry Company Name"
+            name="laundryCompanyName"
+            value={formValues.laundryCompanyName}
             onChange={handleChange}
+            placeholder="City Laundry"
+            error={error}
+            inputStarted={inputStarted}
+          />
+          <SelectInput
+            label="Country"
+            name="country"
+            value={formValues.country}
+            onChange={handleChange}
+            options={[
+              { value: "USD", label: "USD" },
+              { value: "EUR", label: "EUR" },
+              { value: "GBP", label: "GBP" },
+            ]}
+            error={error}
+            inputStarted={inputStarted}
           />
         </div>
+        <TextInput
+          label="Email Address"
+          name="emailAddress"
+          value={formValues.emailAddress}
+          onChange={handleChange}
+          placeholder="City Laundry@gmail.com"
+          error={error}
+          inputStarted={inputStarted}
+        />
         <div className="form-row">
           <div className="form-group">
             <label className="field-label">Phone Number</label>
@@ -281,59 +89,41 @@ const Step1 = () => {
               inputStarted={inputStarted}
             />
           </div>
-          <div className="form-group">
-            <label className="field-label">WhatsApp Number (Optional)</label>
-            <input
-              className={`form-control ${error && "error"} ${
-                inputStarted && "entry-background"
-              }`}
-              type="text"
-              name="whatsAppNumber"
-              placeholder="+233 24 522 4993"
-              value={formValues.whatsAppNumber}
-              onChange={handleChange}
-            />
-          </div>
+          <TextInput
+            label="WhatsApp Number (Optional)"
+            name="whatsAppNumber"
+            value={formValues.whatsAppNumber}
+            onChange={handleChange}
+            placeholder="+233 24 522 4993"
+            error={error}
+            inputStarted={inputStarted}
+          />
         </div>
         <div className="form-row">
-          <div className="form-group">
-            <label className="field-label">GPS Address</label>
-            <input
-              className={`form-control ${error && "error"} ${
-                inputStarted && "entry-background"
-              }`}
-              placeholder="GW-0156-7811"
-              type="text"
-              name="gpsAddress"
-              value={formValues.gpsAddress}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label className="field-label">Transacting Currency</label>
-            <select
-              className={`form-control ${error && "error"} ${
-                inputStarted && "entry-background"
-              } select-form-control`}
-              name="transactingCurrency"
-              value={formValues.transactingCurrency}
-              onChange={handleChange}
-            >
-              <option value="" disabled>
-                Please Select
-              </option>
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
-          </div>
+          <TextInput
+            label="GPS Address"
+            name="gpsAddress"
+            value={formValues.gpsAddress}
+            onChange={handleChange}
+            placeholder="GW-0156-7811"
+            error={error}
+            inputStarted={inputStarted}
+          />
+          <SelectInput
+            label="Transacting Currency"
+            name="transactingCurrency"
+            value={formValues.transactingCurrency}
+            onChange={handleChange}
+            options={[
+              { value: "USD", label: "USD" },
+              { value: "EUR", label: "EUR" },
+              { value: "GBP", label: "GBP" },
+            ]}
+            error={error}
+            inputStarted={inputStarted}
+          />
         </div>
-        <div className="form-group">
-          <label className="field-label">
-            Upload Laundry Logo Image <span className="file-upload-label">(Optional)</span>
-          </label>
-          <FileUpload onFileChange={handleFileChange} />
-        </div>
+          <FileUpload onFileChange={handleFileChange} label="Upload Laundry Logo Image"/>
         {error && (
           <div className="form-error-text">
             <p>Username or password did not match</p>

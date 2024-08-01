@@ -1,7 +1,7 @@
 import React from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import '../styles/phone-number-input.scss'; // Make sure to create and import this CSS file
+import '../../styles/phone-number-input.scss'; // Make sure to create and import this CSS file
 
 const PhoneNumberInput = ({ name, value, onChange, error, inputStarted }) => {
   const handlePhoneChange = (phone) => {

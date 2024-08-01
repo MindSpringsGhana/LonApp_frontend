@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // COMPONENTS
-import FileUpload from "../../components/fileUpload";
-import PhoneNumberInput from "../../components/phoneNumberInput";
+import FileUpload from "../formInputs/fileUpload";
+import PhoneNumberInput from "../formInputs/phoneNumberInput";
 import { Link } from "react-router-dom";
 import "../../styles/loader.scss";
 import { loaderImg, minusImg, alertCircle, checkImg } from "../../../utils/assets";
