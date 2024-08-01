@@ -1,26 +1,68 @@
 @import "../../global";
+
 main {
     width: 1440px;
     height: 950px;
+    box-sizing: border-box;
+
 }
 
 .login-page-wrapper {
-    height: 100%;
+    // height: 100%;
+    box-sizing: border-box;
+    max-height: 912px;
     padding: 11px 21px;
     display: flex;
+    width: 100%;
+
+    .backforward-wrapper {
+
+        // text-align: right;
+        // margin-right: 86px;
+        // margin-left: 756px;
+        width: 720px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 86px;
+
+        // height: 41px;
+        .arrow-back-img {
+            width: 20px;
+            height: 20px;
+            margin-right: auto;
+
+        }
+
+        .skip {
+            display: block;
+            background: $gradient_main ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-left: auto;
+
+        }
+    }
 
     .login-main-wrapper {
         width: 648px;
         height: 493px;
+        display: flex;
         padding: 0 112px 50px 112px;
         margin-left: auto;
-        margin-right: 169px;
+        justify-content: center;
+        // margin-right: 169px;
         margin-top: 245px;
 
+
+
         &.signup-main-wrapper {
-            margin-top: 50px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 20px;
             height: 810px !important;
-            padding: none;
+            padding: 0 40px !important;
+            justify-content: center
         }
 
         .login-main {
@@ -29,17 +71,9 @@ main {
             width: 424px;
 
             &.signup-main {
-                width: 597px;
-
-                .skip-wrapper {
-                    background: $gradient_main ;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    text-align: right;
+                width: 700px;
 
 
-                }
             }
 
             .login-main-header {
@@ -176,6 +210,18 @@ main {
                 &.sign-up-form {
                     margin-top: 47px;
 
+                    &.step-6-form {
+                        width: 424px;
+                        margin-bottom: 62.5px;
+                    }
+
+                    .doc-type-header {
+                        color: $neutral_600_color;
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                        font-weight: 500;
+                    }
+
                     .form-title {
                         display: flex;
                         // justify-content: center;
@@ -187,8 +233,20 @@ main {
                         font-family: Poppins;
                         margin-bottom: 64.09px;
                         width: 421px;
+
                         .form-title-span {
                             color: $primary-color;
+                        }
+
+                        &.step4-form-title {
+                            width: 100%;
+                            // align-items: space-between !important;
+                            // justify-content: space-between !important;
+
+                            .form-group {
+                                margin-bottom: 0 !important;
+                                width: 283px;
+                            }
                         }
 
                         &.click-to-resend {
@@ -196,7 +254,7 @@ main {
                             margin-top: 27.5px;
                         }
 
-                        
+
                     }
 
                     .form-collapse {
@@ -207,12 +265,13 @@ main {
                     &.step2-form {
                         margin-bottom: 40px;
 
-                       
+
                     }
 
                     &.step3-form {
                         margin-top: 120px;
                         margin-bottom: 150px;
+
                         .otp {
                             // margin-top: 3rem;
 
@@ -232,9 +291,20 @@ main {
                                 color: $neutral_600_color;
                                 font-family: Mulish;
                                 padding: 0.5rem;
+                                font-weight: 600;
 
                                 &:focus {
                                     border: 2px solid black !important;
+                                }
+
+                                &.error {
+                                    border: 1px solid #ff9d83;
+                                    color: #f64c4c;
+                                }
+
+                                &.success {
+                                    border: 1px solid #60b527;
+                                    color: #0c4471;
                                 }
                             }
 
@@ -260,7 +330,7 @@ main {
                     display: flex;
                     justify-content: flex-start;
                     gap: 32px;
-                    margin-bottom: 29.5px;
+                    margin-bottom: 20.5px;
                 }
 
                 .form-group {
@@ -269,6 +339,27 @@ main {
                     align-items: flex-start;
                     gap: 8px;
                     width: 100%;
+
+                    .password-wrapper {
+                        position: relative;
+                        width: 100%;
+
+                        .eye-icon {
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 20px;
+                            height: 20px;
+                            background: url('../../../public/assets/hide-password.png') no-repeat center center;
+                            background-size: contain;
+                            cursor: pointer;
+
+                            &.show {
+                                background: url('../../../public/assets/show-password.png');
+                            }
+                        }
+                    }
 
                     &.email-form-group {
                         margin-bottom: 17px;
@@ -322,6 +413,13 @@ main {
 
                         }
 
+                        &.password-form-control {
+                            // -webkit-text-security: disc; // This will help hide the default eye icon in some browsers
+                            &::-ms-reveal {
+                                display: none; // Hide default IE reveal icon
+                              }
+                        }
+
 
                         &.phone-form-control {
                             padding-left: 40px;
@@ -358,6 +456,18 @@ main {
                     text-align: left;
                     font-size: 12px;
 
+                    &.step4-error {
+                        display: flex;
+                        margin-top: 20px;
+
+                        .alert-circle {
+                            margin-right: 6px;
+                        }
+                    }
+
+                    &.form-success {
+                        color: #60b527;
+                    }
                 }
 
                 .form-help-text {
@@ -378,8 +488,10 @@ main {
             }
 
             .form-button {
-                height: 56px;
-                padding: 0px 24px;
+                height: 56px !important;
+
+                padding-top: 16px;
+                padding-bottom: 16px;
 
                 &.reset-confirm-button {
                     margin-top: 27px;
