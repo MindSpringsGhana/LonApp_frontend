@@ -256,6 +256,9 @@ main {
 
 
                     }
+                    .social-media-input {
+                        width: 100%;
+                    }
 
                     .form-collapse {
                         margin-left: auto;
@@ -433,7 +436,7 @@ main {
                             outline: none;
                         }
 
-                        &.entry-background {
+                        & .entry-background {
                             background-color: transparent;
                             border: 2px solid $disabled_color;
 

@@ -34,7 +34,7 @@ const Step1 = () => {
   };
 
   const handleFileChange = (acceptedFiles) => {
-    if (acceptedFiles.length > 0) {
+    if (acceptedFiles) {
       setFormValues((prevValues) => ({
         ...prevValues,
         logo: acceptedFiles[0],
@@ -123,7 +123,10 @@ const Step1 = () => {
             inputStarted={inputStarted}
           />
         </div>
-          <FileUpload onFileChange={handleFileChange} label="Upload Laundry Logo Image"/>
+          <FileUpload onFileChange={handleFileChange} label="Upload Laundry Logo Image" accept={{
+      'image/png': ['.png'],
+      'image/jpeg': ['.jpg', '.jpeg'],
+    }}/>
         {error && (
           <div className="form-error-text">
             <p>Username or password did not match</p>

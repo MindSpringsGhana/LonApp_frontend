@@ -119,7 +119,10 @@ const Step3 = () => {
           inputStarted={inputStarted}
         />
 
-        <FileUpload label="ID Of Company Official" />
+        <FileUpload label="ID Of Company Official" accept={{
+            "image/png": [".png"],
+            "image/jpeg": [".jpg", ".jpeg"],
+          }}/>
 
         {error && (
           <div className="form-error-text">
