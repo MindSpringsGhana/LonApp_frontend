@@ -22,7 +22,7 @@ const DashboardHeader = ({}) => {
           <p className={`header-nav-item ${activeLabel && "active-label"}`}>{activeLabel && activeLabel}</p>
         </nav>
         <div className="dashboard-header-right">
-          <Button page={location.pathname} className="dashboard-header-btn" label={`Add ${modifiedActiveLabel}`} />
+          <Button location={location.pathname} className="dashboard-header-btn" label={`Add ${modifiedActiveLabel}`} />
           <div className="header-icons-wrapper">
             <img className="header-icon" src={dashboardSearchIcon} />
             <img className="header-icon" src={dashboardHeaderBell} />

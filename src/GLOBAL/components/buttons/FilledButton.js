@@ -5,27 +5,19 @@ import {dashboardPlusIcon} from "../../../utils/assets";
 import { useEffect } from "react";
 
 
-const FilledButton = ({ label, action, page, isDisabled = false, className }) => {
+const FilledButton = ({ label, action, page = false, isDisabled = false, className, location }) => {
   // const dispatch = useDispatch();
-
-
-  
-    return (
-      <>
-        <button disabled={isDisabled} onClick={action} className={`filled-btn ${className}`}>
-          <div className="button-col">
-            {(page === "/dashboard") && <img className="dashboard-plus-icon" src={dashboardPlusIcon} alt={dashboardPlusIcon}/>}
+ const dashboardBtn = () => {
+    return <div className="button-col">
+            <img className="dashboard-plus-icon" src={dashboardPlusIcon} alt={dashboardPlusIcon}/>
             <p> {label}</p>
           </div>
-        </button>
-      </>
-    );
-
+  }
   if (page)
     return (
       <>
         {/* <Link to={page} className={`filled-btn ${playIcon ? "with-icon" : ""}`}> */}
-        <Link to={page} className="filled-btn">
+        <Link to={page} className={`filled-btn ${className}`}>
           <div className="align-content">
             {/* <img src={playIcon} alt="Play Icon"></img> */}
             <p> {label}</p>
@@ -33,6 +25,16 @@ const FilledButton = ({ label, action, page, isDisabled = false, className }) =>
         </Link>
       </>
     );
+  
+    return (
+      <>
+        <button disabled={isDisabled} onClick={action} className={`filled-btn ${className}`}>
+          {(location === "/dashboard") ? dashboardBtn() : <p> {label}</p>}
+        </button>
+      </>
+    );
+
+ 
 
   return <></>;
 };

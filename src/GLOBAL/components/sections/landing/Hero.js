@@ -25,10 +25,12 @@ const HeroSection = ({ label, action, page, isDisabled = false }) => {
                 <FilledButton
                   className="text-underline-none w-inline-block"
                   label="I am New Here"
+                  page="/signup"
                 />
                 <OutlineButton
                   className="w-inline-block"
                   label="I Already have an Account"
+                  page="/login"
                 />
               </div>
             </div>
