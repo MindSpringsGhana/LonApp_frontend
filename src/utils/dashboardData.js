@@ -94,3 +94,45 @@ export const employeeMarginRightValues = [
   "32.92px",
   "36px"
 ]
+
+// Define the data for different nav items
+export const data = {
+  employeeData: [
+    {
+      employeeID: "000001",
+      name: "Davida Dzato",
+      email: "davidadzato45@gmail.com",
+      contact: "0245224993",
+      gender: "Female",
+      jobTitle: "Secretary",
+      modulePermissions: ["QA Teams", "Contractors", "Billing", "+4"],
+    },
+    {
+      employeeID: "000002",
+      name: "John Doe",
+      email: "johndoe2211@gmail.com",
+      contact: "0245224993",
+      gender: "Male",
+      jobTitle: "Secretary",
+      modulePermissions: ["QA Teams", "Contractors", "Billing", "+4"],
+    },
+  ],
+  customerData: [
+    {
+      customerID: "000001",
+      name: "Vida Willams",
+      contact: "0245224993",
+      gender: "Female",
+      email: "VidaWills2211@gmail.com",
+      address: "GW-120-7878",
+    },
+    {
+      customerID: "000002",
+      name: "John Doe",
+      contact: "0245224993",
+      gender: "Male",
+      email: "johndoe2211@gmail.com",
+      address: "GW-120-7878",
+    },
+  ],
+};
