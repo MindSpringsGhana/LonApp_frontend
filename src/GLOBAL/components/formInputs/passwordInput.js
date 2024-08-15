@@ -1,6 +1,6 @@
 // components/PasswordInput.js
 import React, { useState } from "react";
-import '../../styles/password-input.scss'
+import '../../styles/formInputStyles/password-input.scss'
 const PasswordInput = ({
   label,
   name,

@@ -1,0 +1,23 @@
+  @import "../../global.scss";
+
+  .dashboard-page-wrapper {
+  background: rgba(229, 229, 229, 0.3);
+  display: flex;
+  width: fit-content;
+  
+
+  .dashboard-aside-section {
+    flex-shrink: 0; /* Prevent the aside from shrinking */
+    width: 279px;
+    background-color: #fff;
+    height: 100%;
+  }
+
+  .dashboard-col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow this column to grow and take up remaining space */
+    width: 100%; /* Ensures it takes the remainder of the width after aside */
+    min-width: calc(1440px - 297px)
+  }
+}

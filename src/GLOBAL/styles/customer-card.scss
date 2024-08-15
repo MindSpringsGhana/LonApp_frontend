@@ -1,0 +1,47 @@
+@import "../../global.scss";
+
+.generic-card-wrapper {
+    &.customer-card {
+        width: 1095.64001px;
+        margin-left: 19px;
+        margin-right: 46.36px;
+    }
+}
+
+.generic-img {
+    &.customer-card {
+        margin-right: 99.28px !important;
+    }
+
+}
+
+.customer-id {
+    margin-right: 103.84px;
+    width: 44.1px;
+    color: $primary-color;
+}
+
+.customer-name {
+    margin-right: 45px;
+    width: 85px;
+}
+
+.customer-contact {
+    margin-right: 40px;
+    width: 78px;
+}
+
+.customer-email {
+    margin-right: 80px;
+    width: 148px;
+}
+
+.gender {
+    margin-right: 61.72px !important;
+    width: 71.08142px;
+}
+
+.customer-address {
+    width: 117px;
+
+}

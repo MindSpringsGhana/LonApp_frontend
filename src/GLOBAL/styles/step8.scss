@@ -1,0 +1,22 @@
+
+.step8-form-row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+    
+}
+.form-col {
+    display: flex;
+    flex-direction: column;
+    width: 283px;
+}
+
+.rectangle-div {
+    width: 3px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #1a96fc;
+    height: 452.6px;
+    }
+

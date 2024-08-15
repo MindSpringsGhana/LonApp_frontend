@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Footer.scss'
-import Arrow from './Arrows';
+import Arrow from '../components/landing/Arrows';
 import FooterSocialLinks from './socialLinks';
 import { lonAppLogo } from '../../utils/assets';
 

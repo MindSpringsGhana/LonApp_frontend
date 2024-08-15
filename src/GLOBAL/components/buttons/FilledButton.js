@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import "../../styles/buttons.scss"
+import "../../styles/buttons.scss";
+import {dashboardPlusIcon} from "../../../utils/assets";
 // import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
@@ -12,7 +13,8 @@ const FilledButton = ({ label, action, page, isDisabled = false, className }) =>
     return (
       <>
         <button disabled={isDisabled} onClick={action} className={`filled-btn ${className}`}>
-          <div>
+          <div className="button-col">
+            {(page === "/dashboard") && <img className="dashboard-plus-icon" src={dashboardPlusIcon} alt={dashboardPlusIcon}/>}
             <p> {label}</p>
           </div>
         </button>

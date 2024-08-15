@@ -1,0 +1,121 @@
+@import "../../global.scss";
+
+.generic-card-wrapper {
+    position: relative;
+    white-space: nowrap;
+    width: 1097px; // set width for particular card
+    max-width: 100%; // Ensures it doesn’t exceed the parent container width
+    margin-left: 10px; // set margin-left for particular card
+    margin-right: 53px; // set margin-right for particular card
+    margin-bottom: 16px;
+
+    .generic-card-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 100%; // Ensures container width doesn’t exceed the parent
+        height: 60px;
+        padding: 15px 13px 15px 17px;
+        border-radius: 10px;
+        background-color: $tertiary_color;
+        font-size: 12px;
+        color: $neutral_600_color;
+        box-sizing: border-box;
+        overflow: hidden; // Prevents any overflow from within the container
+
+        .checkbox-container {
+            margin-right: 10px;
+        }
+
+        .generic-img {
+            width: 30px;
+            height: 30px;
+            margin-right: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 71px;
+            height: 27px;
+            border-radius: 10px;
+        
+            &.Female {
+                background-color: rgba(255, 164, 135, 0.1);
+                color: #ff8156;
+            }
+        
+            &.Male {
+                background-color: rgba(91, 147, 255, 0.1);
+                color: #5b93ff;
+            }
+        }
+
+        .module-permission-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-right: 27px;
+            width: 224px;
+
+            .module-permission-item {
+                height: 23px;
+                padding: 5px;
+                border-radius: 8px;
+                background-color: rgba(91, 147, 255, 0.1);
+                color: #5b93ff;
+                font-size: 10px;
+            }
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: 34px;
+        left: 1080px;
+        width: 110px;
+        height: 113px;
+        font-size: 11px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: $tertiary-color;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+
+        &.visible {
+            opacity: 1;
+        }
+
+        .menu-item {
+            font-size: 11px;
+            width: 90px;
+            height: 27px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.view {
+                background-color: rgba(96, 181, 39, 0.1);
+                color: #60b527;
+            }
+
+            &.edit {
+                background-color: rgba(26, 150, 252, 0.1);
+                color: $primary-color;
+            }
+
+            &.delete {
+                background-color: rgba(255, 57, 50, 0.1);
+                color: #ff3932;
+            }
+        }
+    }
+}

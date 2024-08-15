@@ -1,0 +1,90 @@
+@import "../../global.scss";
+
+.dashboard-aside-section {
+    padding: 20px 20px 17px;
+    width: 279px;
+    background-color: #fff;
+    height: auto;
+}
+
+.dashboard-aside-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .dashboard-aside-logo-header {
+        background: $gradient_main;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-align: left;
+        height: 48px;
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-bottom: 28px;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .dashboard-aside-nav {
+        &.first-nav {
+            margin-bottom: 44px;
+        }
+
+        .nav-item {
+            align-self: stretch;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            gap: 30px;
+            width: 210px;
+            cursor: pointer;
+            height: auto;
+            box-sizing: border-box;
+            /* Include padding and border in the element's width */
+
+            &.active {
+                background-color: #EFF6FF;
+            }
+
+            .nav-item-img {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+                /* Prevent icon from shrinking */
+            }
+
+            .nav-item-text {
+                font-size: 14px;
+                font-family: Poppins;
+                color: $neutral_600_color;
+                width: 110px;
+                height: 100%;
+                // white-space: nowrap; /* Prevent text from wrapping */
+                // overflow: hidden; /* Hide overflowed text */
+                text-overflow: ellipsis;
+                /* Add ellipsis for overflowed text */
+            }
+
+            .dashboard-navitem-arrow {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+
+                /* Prevent arrow from shrinking */
+                &.hide {
+                    visibility: hidden;
+                }
+            }
+
+            // .dashboard-navitem-badge {
+            //    color: red;
+            // }
+        }
+    }
+}

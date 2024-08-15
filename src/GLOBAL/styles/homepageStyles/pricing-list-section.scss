@@ -1,0 +1,293 @@
+@import '../../../global.scss';
+
+
+.travel-agency-landing-page-ui {
+    width: 100%;
+    position: relative;
+    background-color: $tertiary_color;
+    height: auto;
+    overflow: hidden;
+    text-align: left;
+    font-size: 18px;
+    color: #14183e;
+    font-family: Poppins;
+
+
+
+    .ready-pricing-list-default {
+        position: relative !important;
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        color: #4b4b4b;
+        object-fit: fill;
+
+        .pricing-section-bg1-container {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            right: 1085px;
+            width: 450px;
+            height: 368.97px;
+
+            .pricing-section-bg1 {
+                object-fit: cover;
+                width: 100%;
+                max-width: 100%;
+            }
+
+        }
+
+        .pricing-section-bg2-container {
+            position: absolute;
+            top: 804px;
+            right: 51px;
+
+            // left: 1042px;
+            bottom: 629px;
+            width: 500px;
+            height: 368.97px;
+
+            .pricing-section-bg2 {
+                object-fit: cover;
+                width: 100%;
+                max-width: 100%;
+            }
+
+        }
+
+        .title-parent {
+            width: 100%;
+            position: relative;
+            height: 212px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 19px;
+            color: #161c2d;
+            font-family: Poppins;
+
+            .title {
+                align-self: stretch;
+                position: relative;
+                height: 160px;
+                overflow: hidden;
+                flex-shrink: 0;
+
+                .with-lots-of {
+                    position: absolute;
+                    top: 49.38%;
+                    left: calc(50% - 294.5px);
+                    letter-spacing: -0.2px;
+                    line-height: 32px;
+                    display: inline-block;
+                    width: 589px;
+                    opacity: 0.7;
+                    mix-blend-mode: normal;
+                }
+
+                .pricing-plans {
+                    position: absolute;
+                    width: 96.23%;
+                    top: calc(50% - 80px);
+                    left: 0%;
+                    font-size: 50px;
+                    text-transform: capitalize;
+                    display: inline-block;
+                    font-family: Volkhov;
+                    color: #093558;
+                }
+            }
+
+
+
+        }
+    }
+
+    .div34 {
+      
+        margin-top: 74px;
+        margin-left: auto;
+        width: 1109px;
+        height: 266px;
+        font-size: 13px;
+        color: $primary_color;
+
+        .pricing {
+
+            align-self: stretch;
+            display: flex !important;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 11px 31px;
+            gap: 40px;
+
+
+            .pricing-card {
+
+                width: 204px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 21px;
+
+                .pricing-card-header {
+
+                    width: 128px;
+                    position: relative;
+                    height: 46px;
+
+                    .header-main {
+                        position: absolute;
+                        top: calc(50% - 10px);
+                        left: 62.24%;
+                        letter-spacing: 1.63px;
+                        text-transform: uppercase;
+                    }
+
+                    .header-img {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 46px;
+                        height: 46px;
+                    }
+                }
+
+                .monthly-price-wrapper {
+                    width: 149px;
+                    position: relative;
+                    height: auto;
+                    font-size: 17px;
+                    display: flex;
+                    // align-items: center;
+
+                    .monthly-price {
+                        font-weight: 600;
+
+                        .currency {
+                            font-size: 20px;
+                        }
+
+                        .price {
+                            line-height: 136.02%;
+                            font-size: 28px;
+                        }
+                    }
+
+                    .month {
+                        letter-spacing: -0.09px;
+                        line-height: 40px;
+                    }
+                }
+
+                .laundry-capacity-wrapper {
+                    width: 234px;
+                    height: auto;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.2);
+
+                    .laundry-capacity-content {
+                        .pcs {
+                            color: $primary_color;
+                        }
+                    }
+                }
+
+                .pricing-button {
+
+                    padding: 15px 109px 15px 46px;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .pack-benefits-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 1284px;
+        margin-right: 63.99px;
+        margin-left: 99px;
+
+        .pack-header {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: Poppins;
+            color: $primary_color;
+            text-align: left;
+        }
+
+        .pack-benefit {
+            position: relative;
+            font-size: 16px;
+            font-family: Poppins;
+            color: $neutral_600_color;
+            text-align: left;
+            width: 100%;
+            padding: 10px 0;
+            display: flex;
+
+            // justify-content: space-between;
+            &:first-child::after, &:last-child::after,
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 86%;
+                height: 0.6px;
+                background-color: $neutral_600_color;
+                opacity: 40%;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            .benefit-name {
+                display: flex;
+                width: 265px;
+                // flex-shrink: 1;
+            }
+
+            .tick-circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 204px;
+                margin-right: 40px;
+             
+
+            }
+
+            
+        }
+
+        .billed-separately-if {
+
+            position: relative;
+            font-size: 16px;
+            display: flex;
+            font-family: Poppins;
+            background: $gradient_main;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            /* For some browsers that support only the standard syntax */
+            color: transparent;
+            text-align: left;
+            align-items: center;
+            height: 37px;
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import "../../styles/fileUpload.scss";
+import "../../styles/formInputStyles/fileUpload.scss";
 import { fileErrorImg, fileUploadImg, trashImg } from "../../../utils/assets";
 
 const FileUpload = ({ name, label, onFileChange, accept }) => {

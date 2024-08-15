@@ -1,0 +1,42 @@
+@import "../../global.scss";
+.dashboard-main-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+  scrollbar-width: none;
+
+}
+
+.dashboard-main-header {
+    width: 100%; // Adjusted to 100% to match the width of the parent container
+    max-width: 1048px; // Set a maximum width to keep it from stretching too much
+    height: 20px;
+    display: flex;
+    margin-bottom: 25px;
+
+    &.employee-header {
+        margin-left: 21px !important;
+    }
+
+    &.customer-header {
+        margin-left: 32px !important;
+    }
+    .header-col {
+        display: flex;
+        align-items: center;
+
+        .header-col-text {
+            color: $neutral_700_color;
+            font-size: 12px;
+            height: 14px;
+            margin-right: 5px;
+        }
+
+        .header-arrowdown-img {
+            width: 7.14894px;
+            height: 5px;
+        }
+    }
+}

@@ -123,10 +123,14 @@ const Step1 = () => {
             inputStarted={inputStarted}
           />
         </div>
-          <FileUpload onFileChange={handleFileChange} label="Upload Laundry Logo Image" accept={{
-      'image/png': ['.png'],
-      'image/jpeg': ['.jpg', '.jpeg'],
-    }}/>
+        <FileUpload
+          onFileChange={handleFileChange}
+          label="Upload Laundry Logo Image"
+          accept={{
+            "image/png": [".png"],
+            "image/jpeg": [".jpg", ".jpeg"],
+          }}
+        />
         {error && (
           <div className="form-error-text">
             <p>Username or password did not match</p>

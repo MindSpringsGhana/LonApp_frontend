@@ -5,7 +5,13 @@
     color: $tertiary_color;
     border: none;
     border-radius: 10px;
+    .button-col {
+        display: flex;
 
+        .dashboard-plus-icon {
+            margin-right: 6px;
+        }
+    }
     &:hover {
         background-color: $dark_hover_color;
     }
@@ -91,3 +97,4 @@
     //     margin-right: 0.5rem;
     // }
 }
+

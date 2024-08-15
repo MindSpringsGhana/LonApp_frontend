@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // COMPONENTS
-import FileUpload from "../formInputs/fileUpload";
-import PhoneNumberInput from "../formInputs/phoneNumberInput";
 import { Link } from "react-router-dom";
 import "../../styles/loader.scss";
-import { loaderImg, minusImg, alertCircle, checkImg } from "../../../utils/assets";
+import {  alertCircle, checkImg } from "../../../utils/assets";
 import { setInputStarted } from "../../redux/slice/formSlice";
 import OtpInput from "react-otp-input";
 
@@ -15,31 +13,11 @@ const Step5 = () => {
   const { isLoading } = useSelector((state) => state.auth);
   const { inputStarted } = useSelector((state) => state.form);
 
-//   const [formValues, setFormValues] = useState({
-//     socialMediaAccountName: "",
-
-//     socialMediaAccount: "",
-//   });
 
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(true);
   const [otp, setOtp] = useState("");
 
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     dispatch(setInputStarted(e.target.value.length > 0));
-//     setFormValues((prevValues) => ({
-//       ...prevValues,
-//       [name]: value,
-//     }));
-//   };
-
-//   const handlePhoneChange = (value) => {
-//     setFormValues((prevValues) => ({
-//       ...prevValues,
-//       phoneNumber: value,
-//     }));
-//   };
 
   return (
     <>
