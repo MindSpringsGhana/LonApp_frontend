@@ -7,7 +7,8 @@ import "../../styles/loader.scss";
 import {  alertCircle, checkImg } from "../../../utils/assets";
 import { setInputStarted } from "../../redux/slice/formSlice";
 import OtpInput from "react-otp-input";
-
+import "../../styles/signUpStepsStyles/step5.scss";
+// import "../../styles/step3.scss";
 const Step5 = () => {
   const dispatch = useDispatch();
   const { isLoading } = useSelector((state) => state.auth);
@@ -42,14 +43,14 @@ const Step5 = () => {
           />
         </div>
         {error && (
-          <div className="form-error-text step4-error">
+          <div className="form-error-text step5-error">
             <img className="alert-circle" src={alertCircle}/>
             <p>Please enter the correct Verification Code</p>
           </div>
         )}
 
 {success && (
-          <div className="form-error-text step4-error form-success">
+          <div className="form-error-text step5-error form-success">
             <img className="alert-circle" src={checkImg}/>
             <p>Verification Successful</p>
           </div>

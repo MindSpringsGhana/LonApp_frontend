@@ -1,43 +1,46 @@
-// components/InputText.js
+// components/TextareaInput.js
 import React from "react";
 import PropTypes from "prop-types";
+import "../../styles/formInputStyles/textarea.scss";
 
-const textInput = ({
+const TextareaInput = ({
   label,
   name,
   value,
   onChange,
   placeholder,
-  type = "text",
+  rows = 4, // Default number of rows
   error,
   inputStarted,
   className,
-  customeDateWidth
+  styles
 }) => (
   <div className={`form-group ${className}`}>
     <label className="field-label">{label}</label>
-    <input
+    <textarea
       className={`form-control ${error ? "error" : ""} ${
         inputStarted ? "entry-background" : ""
-      } ${customeDateWidth}`}
+      }`}
       name={name}
-      type={type}
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      rows={rows}
+      style={styles}
     />
   </div>
 );
 
-textInput.propTypes = {
+TextareaInput.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  type: PropTypes.string,
+  rows: PropTypes.number,
   error: PropTypes.bool,
   inputStarted: PropTypes.bool,
+  className: PropTypes.string,
 };
 
-export default textInput;
+export default TextareaInput;

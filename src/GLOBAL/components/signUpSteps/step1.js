@@ -72,6 +72,7 @@ const Step1 = () => {
         <TextInput
           label="Email Address"
           name="emailAddress"
+          type="email"
           value={formValues.emailAddress}
           onChange={handleChange}
           placeholder="City Laundry@gmail.com"
@@ -79,16 +80,17 @@ const Step1 = () => {
           inputStarted={inputStarted}
         />
         <div className="form-row">
-          <div className="form-group">
-            <label className="field-label">Phone Number</label>
+          
+            
             <PhoneNumberInput
+              label="Phone Number"
               name="phoneNumber"
               value={formValues.phoneNumber}
               onChange={handleChange}
               error={error}
               inputStarted={inputStarted}
             />
-          </div>
+         
           <TextInput
             label="WhatsApp Number (Optional)"
             name="whatsAppNumber"

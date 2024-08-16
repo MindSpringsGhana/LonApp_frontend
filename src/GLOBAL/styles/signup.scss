@@ -1,0 +1,142 @@
+@import "../../global.scss";
+
+.login-main-wrapper {
+    &.signup-main-wrapper {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 20px;
+        height: 810px !important;
+        padding: 0 40px !important;
+        justify-content: center
+    }
+
+
+    .login-main {
+        &.signup-main {
+            width: 700px;
+        }
+
+        .login-main-header {
+            .sign-up-step-wrapper {
+                display: flex !important;
+                margin-top: 7px;
+
+                .step-text {
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-family: Poppins;
+                    color: $sign_up_step_color;
+                }
+
+                .step-vectors-wrapper {
+                    margin-left: 12px;
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 13px;
+                    align-items: center;
+
+                    .active-step-img {
+                        height: 8px;
+                        width: 28px;
+                        border-radius: 20px;
+                        background-color: $primary-color
+                    }
+
+                    .inactive-step-img {
+                        height: 6px;
+                        width: 6px;
+                        border-radius: 20px;
+                        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #8e8e8e;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.backforward-wrapper {
+
+    // text-align: right;
+    // margin-right: 86px;
+    // margin-left: 756px;
+    width: 720px;
+    display: flex !important;
+    flex-direction: column;
+    margin-right: 86px;
+
+    // height: 41px;
+    .arrow-back-img {
+        width: 20px;
+        height: 20px;
+        margin-right: auto;
+
+    }
+
+    .skip {
+        display: block !important;
+        background: $gradient_main ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-left: auto;
+
+    }
+}
+
+.sign-up-form {
+    margin-top: 47px;
+
+
+    .doc-type-header {
+        color: $neutral_600_color;
+        font-size: 14px;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .form-title {
+        display: flex !important;
+        // justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: $neutral_600_color;
+        width: 561px;
+        font-weight: 500;
+        font-family: Poppins;
+        margin-bottom: 64.09px;
+        width: 421px;
+
+        .form-title-span {
+            color: $primary-color;
+        }
+
+        &.step4-form-title {
+            width: 100%;
+            // align-items: space-between !important;
+            // justify-content: space-between !important;
+
+            .form-group {
+                margin-bottom: 0 !important;
+                width: 283px !important;
+            }
+        }
+
+        &.click-to-resend {
+            font-size: 12px !important;
+            margin-top: 27.5px;
+        }
+
+
+    }
+    .social-media-input {
+        width: 100%;
+    }
+
+    .form-collapse {
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+
+}

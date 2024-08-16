@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import TextInput from "../../components/formInputs/textInput";
 import PasswordInput from "../../components/formInputs/passwordInput";
 import { setInputStarted } from "../../redux/slice/formSlice";
-
+import "../../styles/signUpStepsStyles/step6.scss";
 const Step6 = () => {
   const dispatch = useDispatch();
   const { inputStarted } = useSelector((state) => state.form);

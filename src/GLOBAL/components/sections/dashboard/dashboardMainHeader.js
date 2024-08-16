@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Checkbox from "../../formInputs/checkbox";
-import "../../../styles/dashboard-main.scss";
+import "../../../styles/dashboardStyles/dashboard-main.scss";
 import { headerArrowdownImg } from "../../../../utils/assets";
 
 const DashboardMainHeader = ({

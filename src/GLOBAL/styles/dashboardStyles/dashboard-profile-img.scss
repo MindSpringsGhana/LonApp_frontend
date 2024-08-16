@@ -1,0 +1,27 @@
+.profile-img-wrapper {
+    position: relative;
+    width: 96.51515px;
+    height: 96px;
+    margin-left: 67px;
+    .profile-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #c4c4c4;
+        object-fit: cover;
+    }
+
+    .pencil-icon-wrapper {
+        position: absolute;
+        top: 67.5px;
+        left: 73px;
+        border-radius: 50%;
+        background: $gradient-main;
+        height: 24px;
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+}

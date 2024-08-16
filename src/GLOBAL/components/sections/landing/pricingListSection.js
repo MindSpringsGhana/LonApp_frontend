@@ -2,7 +2,7 @@ import React from "react";
 import "../../../styles/homepageStyles/pricing-list-section.scss";
 import PricingCard from "../../cards/pricingCard";
 import Arrow from "../../landing/Arrows";
-import MonthlyYearlyToggler from "../../landing/Arrows";
+import MonthlyYearlyToggler from "../../landing/monthlyYearlyToggler";
 import { pricingSectionBg1, pricingSectionBg2 } from "../../../../utils/assets";
 import PricingBenefitsList from "../../landing/pricingBenefitsList";
 const PricingListSection = () => {

@@ -1,6 +1,6 @@
 // File: DashboardAsideNavItem.js
 import React from "react";
-import "../../../styles/dashboard-aside-navitem.scss";
+import "../../../styles/dashboardStyles/dashboard-aside-navitem.scss";
 import { dashboardNavItemArrow, employeeListDot } from "../../../../utils/assets";
 
 const DashboardAsideNavItem = ({ label, icon, isActive, onClick }) => {

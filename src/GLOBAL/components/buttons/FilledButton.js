@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 const FilledButton = ({ label, action, page = false, isDisabled = false, className, location }) => {
   // const dispatch = useDispatch();
+  
  const dashboardBtn = () => {
     return <div className="button-col">
             <img className="dashboard-plus-icon" src={dashboardPlusIcon} alt={dashboardPlusIcon}/>

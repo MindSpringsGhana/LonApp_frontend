@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 500px;
   height: 131px;
-  border: 2px dashed #1a96fc;
+  border: 2px dashed $primary_color;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
 
 .file-upload-text {
   font-size: 16px;
-  color: #1a96fc;
+  color: $primary_color;
 }
 
 .file-upload-subtext {
@@ -103,4 +103,8 @@
   .trash-img {
     cursor: pointer;
   }
+}
+
+.file-upload-label {
+  color: $neutral_400_color;
 }

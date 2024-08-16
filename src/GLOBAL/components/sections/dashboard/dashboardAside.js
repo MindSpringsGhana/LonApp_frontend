@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import "../../../styles/dashboard-aside.scss";
+import "../../../styles/dashboardStyles/dashboard-aside.scss";
 import DashboardAsideNavItem from "./dashboardAsideNavItem";
 import { firstNavItems, lastNavItems } from "../../../../utils/dashboardData";
 import { setActiveLabel } from "../../../redux/slice/dashboardSlice";

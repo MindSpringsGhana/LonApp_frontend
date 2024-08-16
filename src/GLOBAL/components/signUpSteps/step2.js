@@ -4,7 +4,7 @@ import TextInput from "../../components/formInputs/textInput";
 import SelectInput from "../../components/formInputs/selectInput";
 import { setInputStarted } from '../../redux/slice/formSlice';
 import { minusImg, plusImg } from "../../../utils/assets";
-
+import "../../styles/signUpStepsStyles/step2.scss";
 const Step2 = () => {
   const dispatch = useDispatch();
   const { inputStarted } = useSelector((state) => state.form);

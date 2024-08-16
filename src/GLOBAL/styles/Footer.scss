@@ -53,7 +53,7 @@
                     padding-right: 0;
 
                     .fli-header {
-                        color: #1a96fc;
+                        color: $primary_color;
                         margin-top: 0;
                         // margin-bottom: 0;
                         font-size: 21px;
@@ -97,7 +97,7 @@
                     align-items: center;
                     width: 100%;
                     display: flex;
-                    color: #1a96fc;
+                    color: $primary_color;
                     letter-spacing: .005em;
                     font-size: 20px;
                     font-weight: 600;

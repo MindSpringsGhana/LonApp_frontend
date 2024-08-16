@@ -67,16 +67,16 @@ const Step7 = () => {
       </div>
 
       <div className="form-row">
-        <div className="form-group">
-          <label className="field-label">Phone Number</label>
+        
           <PhoneNumberInput
             name="phoneNumber"
             value={formValues.phoneNumber}
+            label="Phone Number"
             onChange={handlePhoneChange}
             error={error}
             inputStarted={inputStarted}
           />
-        </div>
+    
         <TextInput
           label="WhatsApp Number (Optional)"
           name="whatsAppNumber"

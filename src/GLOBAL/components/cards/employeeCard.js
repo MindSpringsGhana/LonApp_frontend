@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/employee-card.scss";
+import "../../styles/cardStyles/dashboard/employee-card.scss";
 import Checkbox from "../formInputs/checkbox"; // Adjust the path as necessary
 import { employeeMarginRightValues } from "../../../utils/dashboardData"; // Adjust the path as necessary
 import { employeeCardPlaceholderImg, cardMenuBtn } from "../../../utils/assets"; // Adjust the path as necessary

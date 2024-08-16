@@ -1,0 +1,71 @@
+@import "../../../global.scss";
+@import "./dashboard-profile-img.scss";
+@import "../formInputStyles/form-input-general.scss";
+
+.add-new-item-section {
+    background-color: $tertiary_color;
+    width: 1110px;
+    margin-left: 22px;
+    padding-top: 33.04px;
+    padding-bottom: 43px;
+    .dashboard-back-btn {
+        margin-right: auto;
+        margin-left: 19px;
+        margin-bottom: 28.86px;
+    }
+
+    .item-name {
+        display: flex;
+        background: $gradient_main;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-wrap: nowrap;
+        font-size: 16px;
+        font-weight: 600;
+        height: 27px;
+        margin-left: 67px;
+        margin-bottom: 50px;
+        // .employee-id {
+
+        // }
+    }
+    .add-new-item-form {
+        width: 884px;
+        margin-left: 67px;
+
+        .form-section {
+            .form-section-header {
+                color: $primary_color;
+                font-size: 18px;
+                font-weight: 500; 
+                height: 26.4px;
+                margin-bottom: 28px;  
+            }
+
+            
+                .dashboard-form-group {
+                    .form-control {
+                        background: none;
+                        border: 1px solid #DFEAF2;
+                        border-radius: 15px !important;
+                        // color: #718EBF !important;
+                       
+                    }
+                    .date-width-sm {
+                        width: 181px;
+                    }
+                   
+                }
+            }
+        }
+    
+    .save-details {
+        width: 239px;
+        height: 56px;
+        display: flex !important;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 59px;
+    }
+}

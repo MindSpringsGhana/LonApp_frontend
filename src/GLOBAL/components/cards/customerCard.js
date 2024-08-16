@@ -1,5 +1,5 @@
 // CustomerCard Component
-import "../../styles/customer-card.scss";
+import "../../styles/cardStyles/dashboard/customer-card.scss";
 import DashboardGenericCard from "../../components/cards/dashboardGenericCard";
 import { employeeCardPlaceholderImg } from "../../../utils/assets"; // Adjust the path as necessary
 const CustomerCard = ({ customer, onCheckboxChange, onMenuClick }) => {

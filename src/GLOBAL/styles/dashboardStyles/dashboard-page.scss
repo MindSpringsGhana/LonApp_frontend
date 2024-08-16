@@ -1,9 +1,11 @@
-  @import "../../global.scss";
+  @import "../../../global.scss";
 
   .dashboard-page-wrapper {
   background: rgba(229, 229, 229, 0.3);
   display: flex;
-  width: fit-content;
+  width: 100%;
+  // align-items: center;
+  justify-content: center;
   
 
   .dashboard-aside-section {

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { isLoadingReducer } from "../../redux/slice/authSlice";
 import { nextStep, prevStep } from "../../redux/slice/formSlice";
 import "../../styles/login-page.scss";
+import "../../styles/signup.scss";
 // import Loader from "../components/loader";
 import FormsAside from "../../components/formsAside";
 import Step1 from "../../components/signUpSteps/step1";

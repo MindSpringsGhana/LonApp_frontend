@@ -6,7 +6,7 @@ import SelectInput from "../../components/formInputs/selectInput";
 import { setInputStarted } from "../../redux/slice/formSlice";
 import "../../styles/loader.scss";
 import { loaderImg, minusImg } from "../../../utils/assets";
-import "../../styles/step8.scss";
+import "../../styles/signUpStepsStyles/step8.scss";
 const Step8 = () => {
   const dispatch = useDispatch();
   const { isLoading } = useSelector((state) => state.auth);

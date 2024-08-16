@@ -6,7 +6,7 @@ import TextInput from "../../components/formInputs/textInput";
 import SelectInput from "../../components/formInputs/selectInput";
 import FileUpload from "../formInputs/fileUpload";
 import { setInputStarted } from "../../redux/slice/formSlice";
-
+import "../../styles/signUpStepsStyles/step3.scss";
 const Step3 = () => {
   const dispatch = useDispatch();
   const { inputStarted } = useSelector((state) => state.form);
@@ -63,18 +63,16 @@ const Step3 = () => {
           />
         </div>
         <div className="form-row">
-          <div className="form-group">
-            <label className="field-label">
-              Phone Number (SMS OTP Confirmation)
-            </label>
+       
             <PhoneNumberInput
               name="phoneNumber"
               value={formValues.phoneNumber}
+              label="Phone Number (SMS OTP Confirmation)"
               onChange={handlePhoneChange}
               error={error}
               inputStarted={inputStarted}
             />
-          </div>
+      
           <TextInput
             label="WhatsApp Number"
             name="whatsAppNumber"

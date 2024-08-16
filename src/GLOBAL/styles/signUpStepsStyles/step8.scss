@@ -1,4 +1,4 @@
-
+@import "../../../global.scss";
 .step8-form-row {
     display: flex;
     width: 100%;
@@ -16,7 +16,7 @@
     width: 3px;
     position: relative;
     border-radius: 10px;
-    background-color: #1a96fc;
+    background-color: $primary_color;
     height: 452.6px;
     }
 

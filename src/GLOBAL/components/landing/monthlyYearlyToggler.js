@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../../GLOBAL/styles/monthly-yearly-toggler.scss'
+import '../../../GLOBAL/styles/monthly-yearly-toggler.scss'
 const   MonthlyYearlyToggler = ({  }) => {
   const [yearly, setYearly] = useState(false)
   

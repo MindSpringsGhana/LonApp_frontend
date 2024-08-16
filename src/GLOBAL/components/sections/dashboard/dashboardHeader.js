@@ -2,7 +2,7 @@ import React, { useState  } from "react";
 import {useSelector} from "react-redux"
 import { useLocation } from "react-router-dom";
 import Button from "../../buttons/FilledButton";
-import "../../../styles/dashboard-header.scss";
+import "../../../styles/dashboardStyles/dashboard-header.scss";
 import { dashboardHeaderArrowRight, dashboardOctIcon, dashboardSearchIcon, dashboardHeaderBell } from "../../../../utils/assets";
 const DashboardHeader = ({}) => {
     const location = useLocation()

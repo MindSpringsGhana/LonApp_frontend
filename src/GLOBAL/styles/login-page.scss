@@ -1,5 +1,6 @@
 @import "../../global";
-
+@import "./login-aside.scss";
+@import "./formInputStyles/form-input-general.scss";
 main {
     width: 1440px;
     height: 950px;
@@ -15,35 +16,6 @@ main {
     display: flex;
     width: 100%;
 
-    .backforward-wrapper {
-
-        // text-align: right;
-        // margin-right: 86px;
-        // margin-left: 756px;
-        width: 720px;
-        display: flex;
-        flex-direction: column;
-        margin-right: 86px;
-
-        // height: 41px;
-        .arrow-back-img {
-            width: 20px;
-            height: 20px;
-            margin-right: auto;
-
-        }
-
-        .skip {
-            display: block;
-            background: $gradient_main ;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-left: auto;
-
-        }
-    }
-
     .login-main-wrapper {
         width: 648px;
         height: 493px;
@@ -54,27 +26,10 @@ main {
         // margin-right: 169px;
         margin-top: 245px;
 
-
-
-        &.signup-main-wrapper {
-            box-sizing: border-box;
-            width: 100%;
-            margin-top: 20px;
-            height: 810px !important;
-            padding: 0 40px !important;
-            justify-content: center
-        }
-
         .login-main {
             display: flex;
             flex-direction: column;
             width: 424px;
-
-            &.signup-main {
-                width: 700px;
-
-
-            }
 
             .login-main-header {
                 display: flex;
@@ -149,45 +104,7 @@ main {
 
                         }
                     }
-
-                    .sign-up-step-wrapper {
-                        display: flex;
-                        margin-top: 7px;
-
-                        .step-text {
-                            font-size: 14px;
-                            font-weight: 500;
-                            font-family: Poppins;
-                            color: $sign_up_step_color;
-                        }
-
-                        .step-vectors-wrapper {
-                            margin-left: 12px;
-                            display: flex;
-                            justify-content: flex-start;
-                            gap: 13px;
-                            align-items: center;
-
-                            .active-step-img {
-                                height: 8px;
-                                width: 28px;
-                                border-radius: 20px;
-                                background-color: $primary-color
-                            }
-
-                            .inactive-step-img {
-                                height: 6px;
-                                width: 6px;
-                                border-radius: 20px;
-                                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #8e8e8e;
-                                opacity: 0.6;
-                            }
-                        }
-
-
-
-
-                    }
+ 
                 }
 
             }
@@ -207,248 +124,7 @@ main {
                 color: $neutral_600_color;
                 font-family: Inter;
 
-                &.sign-up-form {
-                    margin-top: 47px;
-
-                    &.step-6-form {
-                        width: 424px;
-                        margin-bottom: 62.5px;
-                    }
-
-                    .doc-type-header {
-                        color: $neutral_600_color;
-                        font-size: 14px;
-                        margin-bottom: 8px;
-                        font-weight: 500;
-                    }
-
-                    .form-title {
-                        display: flex;
-                        // justify-content: center;
-                        align-items: center;
-                        font-size: 18px;
-                        color: $neutral_600_color;
-                        width: 561px;
-                        font-weight: 500;
-                        font-family: Poppins;
-                        margin-bottom: 64.09px;
-                        width: 421px;
-
-                        .form-title-span {
-                            color: $primary-color;
-                        }
-
-                        &.step4-form-title {
-                            width: 100%;
-                            // align-items: space-between !important;
-                            // justify-content: space-between !important;
-
-                            .form-group {
-                                margin-bottom: 0 !important;
-                                width: 283px;
-                            }
-                        }
-
-                        &.click-to-resend {
-                            font-size: 12px !important;
-                            margin-top: 27.5px;
-                        }
-
-
-                    }
-                    .social-media-input {
-                        width: 100%;
-                    }
-
-                    .form-collapse {
-                        margin-left: auto;
-                        cursor: pointer;
-                    }
-
-                    &.step2-form {
-                        margin-bottom: 40px;
-
-
-                    }
-
-                    &.step3-form {
-                        margin-top: 120px;
-                        margin-bottom: 150px;
-
-                        .otp {
-                            // margin-top: 3rem;
-
-
-                            input {
-                                margin-top: 30px;
-                                margin-right: 12px;
-                                min-width: 80px !important;
-                                height: 80px !important;
-                                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-                                backdrop-filter: blur(50px);
-                                border-radius: 8px;
-                                outline: none;
-                                padding: 0.5rem;
-                                border: 1px solid #d0d5dd;
-                                font-size: 48px;
-                                color: $neutral_600_color;
-                                font-family: Mulish;
-                                padding: 0.5rem;
-                                font-weight: 600;
-
-                                &:focus {
-                                    border: 2px solid black !important;
-                                }
-
-                                &.error {
-                                    border: 1px solid #ff9d83;
-                                    color: #f64c4c;
-                                }
-
-                                &.success {
-                                    border: 1px solid #60b527;
-                                    color: #0c4471;
-                                }
-                            }
-
-                            // button {
-                            //   width: 100%;
-                            //   border-radius: 50px;
-                            //   padding: 0.5rem;
-                            //   margin: 2rem 0rem;
-                            //   background: $kg_color;
-                            //   border: none;
-                            //   font-size: $normal_font;
-
-                            //   &:hover {
-                            //     cursor: pointer;
-                            //   }
-                            // }
-                        }
-                    }
-                }
-
-                .form-row {
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    gap: 32px;
-                    margin-bottom: 20.5px;
-                }
-
-                .form-group {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 8px;
-                    width: 100%;
-
-                    .password-wrapper {
-                        position: relative;
-                        width: 100%;
-
-                        .eye-icon {
-                            position: absolute;
-                            right: 10px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            width: 20px;
-                            height: 20px;
-                            background: url('../../../public/assets/hide-password.png') no-repeat center center;
-                            background-size: contain;
-                            cursor: pointer;
-
-                            &.show {
-                                background: url('../../../public/assets/show-password.png');
-                            }
-                        }
-                    }
-
-                    &.email-form-group {
-                        margin-bottom: 17px;
-                    }
-
-                    &:first-child {
-                        margin-bottom: 14px;
-                    }
-
-                    .field-label {
-                        width: 100%;
-                        font-size: 14px;
-                        font-weight: 500;
-                        text-align: left;
-                        display: flex;
-                        align-items: center;
-
-                        .file-upload-label {
-                            color: $neutral_400_color;
-                        }
-
-                    }
-
-                    & select {
-                        background-position: right 22px center !important;
-                        appearance: none;
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        background: url('../../../public/assets/select-dropdown-img.png') no-repeat right 10px center;
-                        background-size: 11.67px;
-                        width: 100%;
-                        font-size: 14px;
-                        color: #333333;
-                        border: 1px solid #e0e0e0;
-                        border-radius: 4px;
-                        transition: border-color 0.2s;
-                    }
-
-                    .form-control {
-                        width: 100%;
-                        height: 46px;
-                        border-radius: 6px;
-                        background-color: $form_field_color;
-                        color: $form_field_text_color;
-                        border: none;
-                        padding: 14px 0 16px 16px;
-
-                        &.select-form-control {
-                            padding-top: 10px !important;
-                            padding-bottom: 10px !important;
-
-                        }
-
-                        &.password-form-control {
-                            // -webkit-text-security: disc; // This will help hide the default eye icon in some browsers
-                            &::-ms-reveal {
-                                display: none; // Hide default IE reveal icon
-                              }
-                        }
-
-
-                        &.phone-form-control {
-                            padding-left: 40px;
-                        }
-
-                        &:active,
-                        &:focus {
-                            background-color: transparent;
-                            color: $neutral_600_color !important;
-                            border: 2px solid $primary-color !important;
-                            outline: none;
-                        }
-
-                        & .entry-background {
-                            background-color: transparent;
-                            border: 2px solid $disabled_color;
-
-                            &.error {
-                                border: 1px solid #ff3932;
-                                color: #f64c4c;
-                            }
-                        }
-
-
-                    }
-                }
+                
 
                 .form-error-text {
                     width: 100%;
@@ -459,14 +135,6 @@ main {
                     text-align: left;
                     font-size: 12px;
 
-                    &.step4-error {
-                        display: flex;
-                        margin-top: 20px;
-
-                        .alert-circle {
-                            margin-right: 6px;
-                        }
-                    }
 
                     &.form-success {
                         color: #60b527;
@@ -483,7 +151,7 @@ main {
 
                     .forgot-password-link {
                         font-family: Poppins;
-                        color: #1a96fc;
+                        color: $primary_color;
                         text-decoration: none;
                         font-size: 12px;
                     }
@@ -519,7 +187,7 @@ main {
 
                 .create-account-link {
                     text-decoration: none;
-                    color: #1a96fc;
+                    color: $primary_color;
                     font-size: 14px;
 
                 }
@@ -527,83 +195,5 @@ main {
         }
     }
 
-    .login-aside {
-        width: 555px;
-        height: 930px;
-        background: $gradient_main;
-        border-radius: 10px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        padding-left: 60px;
-        padding-top: 132px;
-
-        .aside-background-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background-position: 100% 50%;
-            background-image: url('../../../public/assets/aside-bg-img.png')
-        }
-
-        .login-aside-header {
-            font-size: 32px;
-            letter-spacing: -0.01em;
-            font-weight: 600;
-            font-family: Poppins;
-            color: $tertiary_color;
-            margin-right: 132px;
-        }
-
-        .login-aside-img {
-            height: 274.5px;
-            width: 413.41499px;
-            object-fit: contain;
-            overflow: hidden;
-            margin-top: 44px;
-        }
-
-        .login-aside-text-container {
-            display: flex;
-            flex-direction: column;
-            margin-top: 69.11px;
-
-            .text-container-header {
-                font-size: 20px;
-                font-weight: 600;
-                font-family: Poppins;
-                color: #fff;
-
-            }
-
-            .text-container-body {
-                display: flex;
-                flex-direction: column;
-                margin-top: 14px;
-                gap: 14px;
-                align-items: flex-start;
-
-                .text-container-body-item {
-                    display: flex;
-                    align-items: center;
-
-                    .body-item-img {
-                        height: 24px;
-                        width: 24px;
-                        margin-right: 14px;
-                    }
-
-                    .body-item-text {
-                        font-size: 12px;
-                        color: $tertiary_color;
-                    }
-                }
-            }
-
-
-        }
-    }
+    
 }

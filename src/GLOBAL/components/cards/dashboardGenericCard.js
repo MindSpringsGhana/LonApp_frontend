@@ -92,7 +92,7 @@
 
 // export default DashboardGenericCard;
 import React, { useState } from "react";
-import "../../styles/dashboard-generic-card.scss";
+import "../../styles/cardStyles/dashboard/dashboard-generic-card.scss";
 import { cardMenuBtn } from "../../../utils/assets";
 
 const DashboardGenericCard = ({
