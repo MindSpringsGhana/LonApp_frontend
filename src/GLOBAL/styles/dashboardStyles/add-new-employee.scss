@@ -6,6 +6,7 @@
     background-color: $tertiary_color;
     width: 1110px;
     margin-left: 22px;
+    margin-right: 26px;
     padding-top: 33.04px;
     padding-bottom: 43px;
     .dashboard-back-btn {
@@ -45,12 +46,26 @@
 
             
                 .dashboard-form-group {
-                    .form-control {
-                        background: none;
+                    &.form-control-row {
+                        flex-direction: row !important;
+                        gap: 9px;
+                        width: auto;
+                        align-items: center;
+                    }
+                    .form-control, select {
+                        // background: none;
                         border: 1px solid #DFEAF2;
                         border-radius: 15px !important;
                         // color: #718EBF !important;
-                       
+                        
+                      
+                        
+                    }
+                     select{
+                        background: transparent url('../../../../public/assets/select-dropdown-img.png') no-repeat right 10px center;
+                    }
+                    .form-control:not(select) {
+                        background: none;
                     }
                     .date-width-sm {
                         width: 181px;

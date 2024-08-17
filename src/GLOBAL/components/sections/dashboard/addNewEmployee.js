@@ -10,9 +10,10 @@ import TextInput from "../../formInputs/textInput";
 import PhoneNumberInput from "../../formInputs/phoneNumberInput";
 import SelectInput from "../../formInputs/selectInput";
 import TextareaInput from "../../formInputs/textAreaInput";
+import TimeInput from "../../formInputs/timeInput";
 // STYLES
 import "../../../styles/dashboardStyles/add-new-employee.scss";
-
+import { validateShiftTimes } from "../../../../utils/formInputHandlers";
 const AddNewEmployee = () => {
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -28,6 +29,11 @@ const AddNewEmployee = () => {
     employmentStatus: "",
     supervisor: "",
     hireDate: "",
+    startShift: null,
+    breakTime: null,
+    endShift: null,
+    numberOfDaysPerWeek: "",
+    totalHoursPerDay: "",
     vacationDays: "",
     sickLeaveDays: "",
     compassionateLeaveDays: "",
@@ -35,8 +41,16 @@ const AddNewEmployee = () => {
     qualificationName: "",
     yearAttained: "",
     hrNotes: "",
-    module: ""
+    module: "",
   });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues((prevValues) => {
+      const newValues = { ...prevValues, [name]: value };
+      return validateShiftTimes(name, newValues, prevValues);
+    });
+  };
   return (
     <>
       <section className="add-new-item-section">
@@ -63,6 +77,7 @@ const AddNewEmployee = () => {
                 label="First Name"
                 name="firstName"
                 value={formValues.firstName}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
               />
@@ -70,6 +85,7 @@ const AddNewEmployee = () => {
                 label="Last Name"
                 name="lastName"
                 value={formValues.lastName}
+                onChange={handleInputChange}
                 placeholder="San Jose"
                 className="dashboard-form-group"
               />
@@ -79,6 +95,7 @@ const AddNewEmployee = () => {
                 label="Middle Name"
                 name="middleName"
                 value={formValues.middleName}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
               />
@@ -86,6 +103,7 @@ const AddNewEmployee = () => {
                 label="Phone Number"
                 name="phoneNumber"
                 value={formValues.phoneNumber}
+                onChange={handleInputChange}
                 className="dashboard-form-group"
               />
             </div>
@@ -95,6 +113,7 @@ const AddNewEmployee = () => {
                 name="dateOfBirth"
                 type="date"
                 value={formValues.dateOfBirth}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
                 customeDateWidth="date-width-sm"
@@ -104,6 +123,7 @@ const AddNewEmployee = () => {
                 name="Gender"
                 value={formValues.gender}
                 placeholder="Gender"
+                onChange={handleInputChange}
                 options={[
                   {
                     value: "Male",
@@ -123,12 +143,14 @@ const AddNewEmployee = () => {
                 label="Phone Number"
                 name="phoneNumber"
                 value={formValues.phoneNumber}
+                onChange={handleInputChange}
                 className="dashboard-form-group"
               />
               <TextInput
                 label="WhatsApp Number(Optional)"
                 name="whatsAppNumber"
                 value={formValues.whatsAppNumber}
+                onChange={handleInputChange}
                 placeholder="San Jose"
                 className="dashboard-form-group"
               />
@@ -139,6 +161,7 @@ const AddNewEmployee = () => {
                 name="emailAddress"
                 type="email"
                 value={formValues.emailAddress}
+                onChange={handleInputChange}
                 //   onChange={handleChange}
                 placeholder="davidadzato45@gmail.com"
                 //   error={error}
@@ -151,6 +174,7 @@ const AddNewEmployee = () => {
                 label="Residential Address"
                 name="residentialAddress"
                 value={formValues.residentialAddress}
+                onChange={handleInputChange}
                 placeholder="########"
                 className="dashboard-form-group"
                 styles={{ height: "128.07px" }}
@@ -164,6 +188,7 @@ const AddNewEmployee = () => {
                 label="Job Title"
                 name="jobTitle"
                 value={formValues.jobTitle}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
               />
@@ -171,6 +196,7 @@ const AddNewEmployee = () => {
                 label="Department"
                 name="department"
                 value={formValues.department}
+                onChange={handleInputChange}
                 placeholder="Select Department"
                 options={[
                   {
@@ -189,12 +215,14 @@ const AddNewEmployee = () => {
                 name="employmentStatus"
                 value={formValues.employmentStatus}
                 placeholder="45962"
+                onChange={handleInputChange}
                 className="dashboard-form-group"
               />
               <SelectInput
                 label="Supervisor"
                 name="supervisor"
                 value={formValues.supervisor}
+                onChange={handleInputChange}
                 placeholder="Select Supervisor"
                 options={[
                   {
@@ -213,6 +241,7 @@ const AddNewEmployee = () => {
                 name="hireDate"
                 type="date"
                 value={formValues.hireDate}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
                 customeDateWidth="date-width-sm"
@@ -220,14 +249,65 @@ const AddNewEmployee = () => {
             </div>
           </div>
           <div className="form-section">
-            <h2 className="form-section-header">Leave and Time Off</h2>
-            
+            <h2 className="form-section-header">Attendance and Schedule</h2>
             <div className="form-row">
-            <SelectInput
+              <TimeInput
+                label="Start Shift"
+                name="startShift"
+                value={formValues.startShift}
+                onChange={handleInputChange}
+              />
+              <TimeInput
+                label="Break"
+                name="breakTime"
+                value={formValues.breakTime}
+                onChange={handleInputChange}
+                startShift={formValues.startShift}
+                endShift={formValues.endShift}
+              />
+              <TimeInput
+                label="End Shift"
+                name="endShift"
+                value={formValues.endShift}
+                onChange={handleInputChange}
+                startShift={formValues.startShift}
+              />
+            </div>
+            <div className="form-row">
+              <TextInput
+                label="Total Hours per day:"
+                name="totalHoursPerDay"
+                type="number"
+                value={formValues.totalHoursPerDay}
+                onChange={handleInputChange}
+                styles={{width: "61px", height: "49px", textAlign: "center"}}
+                className="dashboard-form-group form-control-row"
+              />
+            
+            </div>
+            <div className="form-row">
+              <TextInput
+                label="Number of Days per week:"
+                name="numberOfDaysPerWeek"
+                type="number"
+                value={formValues.numberOfDaysPerWeek}
+                onChange={handleInputChange}
+                styles={{width: "61px", height: "49px", textAlign: "center"}}
+                className="dashboard-form-group form-control-row"
+              />
+            
+            </div>
+          </div>
+          <div className="form-section">
+            <h2 className="form-section-header">Leave and Time Off</h2>
+
+            <div className="form-row">
+              <SelectInput
                 label="Vacation Days"
                 name="vacationDays"
                 placeholder="Select Work days"
                 value={formValues.vacationDays}
+                onChange={handleInputChange}
                 options={[
                   {
                     value: "Male",
@@ -243,6 +323,7 @@ const AddNewEmployee = () => {
                 name="sickLeaveDays"
                 value={formValues.sickLeaveDays}
                 placeholder="Select Working Hours"
+                onChange={handleInputChange}
                 options={[
                   {
                     value: "Male",
@@ -255,10 +336,11 @@ const AddNewEmployee = () => {
               />
             </div>
             <div className="form-row">
-            <SelectInput
+              <SelectInput
                 label="Compassionate Leave Days"
                 name="compassionateLeaveDays"
                 value={formValues.compassionateLeaveDays}
+                onChange={handleInputChange}
                 placeholder="Select Work days"
                 options={[
                   {
@@ -274,6 +356,7 @@ const AddNewEmployee = () => {
                 label="Maternity Leave"
                 name="maternityLeave"
                 value={formValues.maternityLeave}
+                onChange={handleInputChange}
                 placeholder="Select Working Hours"
                 options={[
                   {
@@ -286,16 +369,16 @@ const AddNewEmployee = () => {
                 className="dashboard-form-group"
               />
             </div>
-            
           </div>
           <div className="form-section">
             <h2 className="form-section-header">Qualifications</h2>
-            
+
             <div className="form-row">
-            <TextInput
+              <TextInput
                 label="Qualification Name"
                 name="qualificationName"
                 value={formValues.qualificationName}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
               />
@@ -304,13 +387,12 @@ const AddNewEmployee = () => {
                 name="yearAttained"
                 type="date"
                 value={formValues.yearAttained}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
                 customeDateWidth="date-width-sm"
               />
             </div>
-           
-            
           </div>
           <div className="form-section">
             <h2 className="form-section-header">Emergency Contact</h2>
@@ -319,6 +401,7 @@ const AddNewEmployee = () => {
                 label="First Name"
                 name="firstName"
                 value={formValues.firstName}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
               />
@@ -326,6 +409,7 @@ const AddNewEmployee = () => {
                 label="Last Name"
                 name="lastName"
                 value={formValues.lastName}
+                onChange={handleInputChange}
                 placeholder="San Jose"
                 className="dashboard-form-group"
               />
@@ -335,6 +419,7 @@ const AddNewEmployee = () => {
                 label="Middle Name"
                 name="middleName"
                 value={formValues.middleName}
+                onChange={handleInputChange}
                 placeholder="45962"
                 className="dashboard-form-group"
               />
@@ -342,15 +427,16 @@ const AddNewEmployee = () => {
                 label="Phone Number"
                 name="phoneNumber"
                 value={formValues.phoneNumber}
+                onChange={handleInputChange}
                 className="dashboard-form-group"
               />
             </div>
             <div className="form-row">
-            
               <TextInput
                 label="WhatsApp Number(Optional)"
                 name="whatsAppNumber"
                 value={formValues.whatsAppNumber}
+                onChange={handleInputChange}
                 placeholder="San Jose"
                 className="dashboard-form-group"
               />
@@ -358,6 +444,7 @@ const AddNewEmployee = () => {
                 label="Gender"
                 name="Gender"
                 value={formValues.gender}
+                onChange={handleInputChange}
                 placeholder="Gender"
                 options={[
                   {
@@ -368,12 +455,14 @@ const AddNewEmployee = () => {
                 ]}
                 // error={error}
                 className="dashboard-form-group"
-              /></div>
+              />
+            </div>
             <div className="form-row">
               <TextareaInput
                 label="Residential Address"
                 name="residentialAddress"
                 value={formValues.residentialAddress}
+                onChange={handleInputChange}
                 placeholder="########"
                 className="dashboard-form-group"
                 styles={{ height: "128.07px" }}
@@ -382,29 +471,29 @@ const AddNewEmployee = () => {
           </div>
           <div className="form-section">
             <h2 className="form-section-header">Hr Notes</h2>
-            
+
             <div className="form-row">
-            <TextareaInput
+              <TextareaInput
                 label=""
                 name="hrNotes"
                 value={formValues.hrNotes}
+                onChange={handleInputChange}
                 placeholder="########"
                 className="dashboard-form-group"
                 styles={{ height: "128.07px" }}
               />
             </div>
-           
-            
           </div>
           <div className="form-section">
             <h2 className="form-section-header">Assignment By</h2>
-            
+
             <div className="form-row">
-            <SelectInput
+              <SelectInput
                 label=""
                 name="module"
                 placeholder="Module"
                 value={formValues.module}
+                onChange={handleInputChange}
                 options={[
                   {
                     value: "Male",
@@ -419,6 +508,7 @@ const AddNewEmployee = () => {
                 label=""
                 name="role"
                 value={formValues.role}
+                onChange={handleInputChange}
                 placeholder="Role"
                 options={[
                   {
@@ -431,8 +521,6 @@ const AddNewEmployee = () => {
                 className="dashboard-form-group"
               />
             </div>
-            
-            
           </div>
         </div>
         <FilledButton label="Save Details" className="save-details" />

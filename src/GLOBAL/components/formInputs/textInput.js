@@ -12,7 +12,8 @@ const textInput = ({
   error,
   inputStarted,
   className,
-  customeDateWidth
+  customeDateWidth,
+  styles
 }) => (
   <div className={`form-group ${className}`}>
     <label className="field-label">{label}</label>
@@ -25,6 +26,7 @@ const textInput = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      style={styles}
     />
   </div>
 );

@@ -1,0 +1,96 @@
+@import "../../../global.scss";
+
+.time-entry-container {
+    display: flex;
+
+
+    .time-entry {
+        display: flex;
+        flex-direction: column;
+       
+        label {
+            font-size: 14px;
+            font-weight: 400;
+            color: #718EBF;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .custom-time-picker {
+            display: flex;
+            gap: 5px;
+            justify-content: flex-start;
+
+            .time-input {
+                height: 28px;
+                width: 39.23px;
+                background-color: #EEEEEE;
+                color: #000000;
+                border-radius: 4.51px;
+                border: none;
+                text-align: center;
+
+                &:active, &:focus {
+                    border: 0.5px solid #2196F3;
+                    background-color: transparent;
+                    outline: none;
+                }
+            }
+
+            .ampm-toggle {
+                display: flex;
+                // overflow: hidden;
+              
+                button {
+                    width: 32px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    // line-height: 18px;
+                    text-align: center;
+                    border: none;
+                    cursor: pointer;
+                    background-color: #EEEEEE;
+                    transition: background-color 0.3s ease;
+            
+                    &.active {
+                      background-color: #007bff;
+                      color: white;
+                    }
+            
+                    &:not(.active):hover {
+                      background-color: #e6e6e6;           
+                    }
+
+                    &:focus {
+                      outline: none;
+                    }
+            
+                    &:first-child {
+                      border-radius: 4.51px  0px 0px 4.51px;
+                    }
+
+                    &:last-child {
+                        border-radius:   0px 4.51px 4.51px 0px ;
+
+                    }
+                  }
+            }
+        }
+    }
+}
+
+/* Hide spinners in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spinners in Firefox */
+// input[type="number"] {
+//     -moz-appearance: textfield;
+// }
+
+

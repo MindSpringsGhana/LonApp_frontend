@@ -7,6 +7,7 @@ import DashboardHeader from "../components/sections/dashboard/dashboardHeader";
 const DashBoardPage = () => {
   return (
     <>
+      <main className="dashboard-main">
       <div className="dashboard-page-wrapper">
         <DashboardAside />
         <div className="dashboard-col">
@@ -14,6 +15,8 @@ const DashBoardPage = () => {
           <DashboardMain />
         </div>
       </div>
+      </main>
+      
     </>
   );
 };
