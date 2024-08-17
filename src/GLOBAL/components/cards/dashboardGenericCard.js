@@ -161,7 +161,7 @@ const DashboardGenericCard = ({
           className="card-menu-btn"
           src={cardMenuBtn}
           alt="Menu"
-          onMouseEnter={showMenu}
+          onClick={showMenu}
           onMouseLeave={hideMenu}
         />
       </div>
@@ -169,8 +169,8 @@ const DashboardGenericCard = ({
       {/* Dropdown Menu */}
       <div
         className={`menu ${isMenuVisible ? "visible" : ""}`}
-        onMouseEnter={showMenu}
-        onMouseLeave={hideMenu}
+        onClick={showMenu}
+        // onMouseLeave={hideMenu}
       >
         <div className="menu-item view" onClick={() => onMenuClick("view")}>
           <p>View</p>

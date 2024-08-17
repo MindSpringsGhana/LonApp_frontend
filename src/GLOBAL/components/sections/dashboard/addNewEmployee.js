@@ -14,7 +14,9 @@ import TimeInput from "../../formInputs/timeInput";
 // STYLES
 import "../../../styles/dashboardStyles/add-new-employee.scss";
 import { validateShiftTimes } from "../../../../utils/formInputHandlers";
+
 const AddNewEmployee = () => {
+
   const [formValues, setFormValues] = useState({
     firstName: "",
     lastName: "",

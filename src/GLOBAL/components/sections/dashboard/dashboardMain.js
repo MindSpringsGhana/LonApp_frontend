@@ -1,27 +1,33 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import "../../../styles/dashboardStyles/dashboard-main.scss";
-import DashboardMainHeader from "../dashboard/dashboardMainHeader";
-import { getDashboardConfig } from "../../../../utils/dashboardHandlers";
-import DashboardCardList from "./dashboardCardList";  // Import the new CardList component
-import AddNewEmployee from "./addNewEmployee";
+
+// import { getDashboardConfig } from "../../../../utils/dashboardHandlers";
+import { Outlet } from "react-router-dom";
 
 const DashboardMain = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const checkboxStyles = { marginRight: "10px" };
-  const activeLabel = useSelector((state) => state.dashboard.activeLabel); // Get the active label from Redux
+  // const [isChecked, setIsChecked] = useState(false);
+  // const checkboxStyles = { marginRight: "10px" };
+  // const activeLabel = useSelector((state) => state.dashboard.activeLabel); // Get the active label from Redux
 
 
-  const handleCheckboxChange = (e) => {
-    setIsChecked(e.target.checked);
-  };
+  // const handleCheckboxChange = (e) => {
+  //   setIsChecked(e.target.checked);
+  // };
 
-  const {headerItems, dataE, headerMarginRightValues, className} = getDashboardConfig(activeLabel);
+  // const {headerItems, dataE, headerMarginRightValues, className} = getDashboardConfig(activeLabel);
 
   return (
     <section className="dashboard-main-section">
-      <AddNewEmployee/>
-      {/* <DashboardMainHeader
+     <Outlet />
+     </section>
+     
+    
+  );
+};
+
+export default DashboardMain;
+ {/* <DashboardMainHeader
         headerItems={headerItems}
         onSelectAllChange={handleCheckboxChange}
         isChecked={isChecked}
@@ -30,8 +36,3 @@ const DashboardMain = () => {
         className={className}
       />
       <DashboardCardList activeLabel={activeLabel} data={dataE} />  Render cards based on the active label */}
-    </section>
-  );
-};
-
-export default DashboardMain;
