@@ -8,8 +8,9 @@ import ResetPasswordPage from "./GLOBAL/pages/auth/resetPasswordPage";
 import ResetPasswordConfirmPage from "./GLOBAL/pages/auth/resetPasswordConfirmPage";
 import DashBoardPage from "./GLOBAL/pages/dashboardPage.js";
 import DashboardMain from "./GLOBAL/components/sections/dashboard/dashboardMain.js";
-import AddNewEmployee from "./GLOBAL/components/sections/dashboard/addNewEmployee.js";
+import AddNewItem from "./GLOBAL/components/sections/dashboard/addNewItem.js";
 import DashboardItemList from "./GLOBAL/components/sections/dashboard/dashboardItemList.js";
+import { employeeFormConfig, customerFormConfig } from "./utils/dashboardFormConfigs.js"
 function App() {
   return (
     <BrowserRouter>
@@ -23,8 +24,10 @@ function App() {
           element={<ResetPasswordConfirmPage />}
         />
          <Route path="/dashboard" element={<DashBoardPage />}>
-          <Route path="add-new-employee" element={<AddNewEmployee />} />
-          {/* <Route path="employee-list" element={<DashboardItemList />} /> */}
+          {/* <Route path="add-new-employee" element={<AddNewItem />} /> */}
+          <Route path="add-new-employee" element={<AddNewItem {...employeeFormConfig} />} />
+          <Route path="add-new-customers" element={<AddNewItem {...customerFormConfig} />} />
+          <Route path="employee-list" element={<DashboardItemList />} />
           <Route path="customers-list" element={<DashboardItemList />} />
         </Route>
       </Routes>

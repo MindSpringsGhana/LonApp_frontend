@@ -1,6 +1,7 @@
 @import "../../../global.scss";
 @import "./dashboard-profile-img.scss";
 @import "../formInputStyles/form-input-general.scss";
+@import "../dashboardStyles/add-new-item-scrollbar.scss";
 
 .add-new-item-section {
     background-color: $tertiary_color;
@@ -9,6 +10,7 @@
     margin-right: 26px;
     padding-top: 33.04px;
     padding-bottom: 43px;
+    padding-right: 14px;
     .dashboard-back-btn {
         margin-right: auto;
         margin-left: 19px;
@@ -48,9 +50,11 @@
                 .dashboard-form-group {
                     &.form-control-row {
                         flex-direction: row !important;
+                        flex-wrap: wrap;
                         gap: 9px;
                         width: auto;
                         align-items: center;
+                        flex: 1 1 50%;
                     }
                     .form-control, select {
                         // background: none;
@@ -82,5 +86,7 @@
         align-items: center;
         margin-left: auto;
         margin-right: 59px;
+        margin-top: 40px;
     }
 }
+

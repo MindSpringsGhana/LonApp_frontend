@@ -162,7 +162,7 @@ const DashboardGenericCard = ({
           src={cardMenuBtn}
           alt="Menu"
           onClick={showMenu}
-          onMouseLeave={hideMenu}
+          on={hideMenu}
         />
       </div>
 

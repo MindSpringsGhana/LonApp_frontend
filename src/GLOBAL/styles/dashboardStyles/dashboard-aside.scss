@@ -48,7 +48,13 @@
             height: auto;
             box-sizing: border-box;
             /* Include padding and border in the element's width */
+            &.sub-nav-item {
+                justify-content: flex-start;
 
+                .nav-item-text {
+                    width: 100%;
+                }
+            }
             &.active {
                 background-color: #EFF6FF;
             }
